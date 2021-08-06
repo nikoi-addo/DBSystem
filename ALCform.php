@@ -465,6 +465,19 @@
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
                         <h4 class="page-title">Abundant Life 2021</h4>
+                        <?php
+                            if(isset($_GET['rsp']) && $_GET['rsp'] == 0){
+                        ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Congrats!</strong> Your registration code is ALC00<?php echo $_GET['regcode']; ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <?php
+                        }
+
+                        ?>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>

@@ -476,7 +476,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
                                 <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">ALC 2021</li>
+                                <li class="breadcrumb-item active" aria-current="page">ALC 2021 - Day 1(Friday)</li>
                             </ol>
                         </div>
                     </div>
