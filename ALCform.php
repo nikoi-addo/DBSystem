@@ -487,6 +487,8 @@
                     </div>
                     <!-- End col -->
                     <!-- Start col -->
+
+                    <form method="post" action="ops/handleform.php">
                     <div class="col-lg-12">
                         <div class="card m-b-30">
                             <div class="card-header">
@@ -496,28 +498,28 @@
                                
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputEmail4">First Name</label>
-                                        <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+                                        <label for="firstname">First Name</label>
+                                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Last Name</label>
-                                        <input type="text" class="form-control" id="inputText" placeholder="Last Name">
+                                        <label for="lastname">Last Name</label>
+                                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Date Of Birth</label>
-                                        <input type="date" class="form-control" name="dob" id="inputDate">
+                                        <label for="dob">Date Of Birth</label>
+                                        <input type="date" class="form-control" name="dob" id="dob">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="title">Title</label>
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">Title:</label>
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                                <option selected>Choose...</option>
-                                                <option value="1">Mr.</option>
-                                                <option value="2">Mrs.</option>
-                                                <option value="3">Miss</option>
-                                                <option value="4">Pastor</option>
-                                                <option value="5">Minister</option>
+                                            <select class="custom-select" id="inputGroupSelect01" name="title" required>
+                                                <option selected disabled hidden>Choose...</option>
+                                                <option value="Mr.">Mr.</option>
+                                                <option value="Mrs.">Mrs.</option>
+                                                <option value="Miss">Miss</option>
+                                                <option value="Pastor">Pastor</option>
+                                                <option value="Minister">Minister</option>
                                             </select>
                                         </div>
                                         
@@ -532,15 +534,15 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Email</label>
-                                        <input type="email" class="form-control" name="inputEmail" id="inputText" placeholder="name@example.com">
+                                        <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="name@example.com">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Phone Number</label>
-                                    <input type="tel" class="form-control" name="inputTel" id="inputTel" placeholder="0200000000">
+                                        <label for="inputTel">Phone Number</label>
+                                    <input type="tel" class="form-control" name="telephone" id="inputTel" placeholder="0200000000">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Location</label>
-                                        <input type="text" class="form-control" name="loc" id="inputText" placeholder="Location">
+                                        <label for="inputText">Location</label>
+                                        <input type="text" class="form-control" name="location" id="inputText" placeholder="Location">
                                     </div>
                                 </div>
                             </div>
@@ -551,25 +553,25 @@
                             
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="programaware">How did you hear about the program?</label>
+                                        <label>How did you hear about the program?</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="radio1" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="radio1" name="customradio" class="custom-control-input" value="Social Media">
                                             <label class="custom-control-label" for="radio1">Social Media</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="radio2" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="radio2" name="customradio" class="custom-control-input" value="Church Service">
                                             <label class="custom-control-label" for="radio2">Church Service</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="radio3" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="radio3" name="customradio" class="custom-control-input" value="Cell Meeting">
                                             <label class="custom-control-label" for="radio3">Cell Meeting</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="radio4" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="radio4" name="customradio" class="custom-control-input" value="Invitation">
                                             <label class="custom-control-label" for="radio4">Invitation</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="radio5" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="radio5" name="customradio" class="custom-control-input" value="Other">
                                             <label class="custom-control-label" for="radio5">Other</label>
                                         </div>
                                     </div>
@@ -577,7 +579,7 @@
                                         <label for="inputPassword4">What are your expectations for ALC 2021?</label>
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Expectations :</span>
-                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            <textarea class="form-control" aria-label="With textarea" name="expectations"></textarea>
                                         </div>
 
                                         
@@ -587,23 +589,23 @@
                                         <label for="socialmedia">Which Social Media Platform</label>
                                         <div class="custom-checkbox-button">
                                             <div class="form-check-inline checkbox-primary">
-                                                <input type="checkbox" id="facebook" name="facebook">
+                                                <input type="checkbox" id="facebook" name="socialmedia" value="facebook">
                                                 <label for="facebook">&nbsp; Facebook</label>
                                             </div>
                                             <div class="form-check-inline checkbox-success">
-                                                <input type="checkbox" id="whatsapp" name="whatsapp">
+                                                <input type="checkbox" id="whatsapp" name="socialmedia" value="whatsapp">
                                                 <label for="whatsapp">&nbsp; Whatsapp</label>
                                             </div>
                                             <div class="form-check-inline checkbox-danger">
-                                                <input type="checkbox" id="instagram" name="instagram">
+                                                <input type="checkbox" id="instagram" name="socialmedia" value="instagram">
                                                 <label for="instagram">&nbsp; Instagram</label>
                                             </div>
                                             <div class="form-check-inline checkbox-warning">
-                                                <input type="checkbox" id="snapchat" name="snapchat">
+                                                <input type="checkbox" id="snapchat" name="socialmedia" value="snapchat">
                                                 <label for="snapchat">&nbsp; Snapchat</label>
                                             </div>
                                             <div class="form-check-inline checkbox-info">
-                                                <input type="checkbox" id="twitter" name="twitter">
+                                                <input type="checkbox" id="twitter" name="socialmedia" value="twitter">
                                                 <label for="twitter">&nbsp; Twitter</label>
                                             </div>
                                         </div>
@@ -611,23 +613,25 @@
                                     </div>
                                   
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">On which days will you be attending ALC 2021?</label>
+                                        <label for="#">On which days will you be attending ALC 2021?</label>
+                                        <div class="custom-control custom-switch">
+
+                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Friday" id="customSwitch1">
+                                            <label class="custom-control-label" for="customSwitch1">Friday</label>
+
+                                        </div>
+
                                         <div class="custom-control custom-switch">
                                             
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                            <label class="custom-control-label" for="customSwitch1">Friday</label>
-                                           
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Saturday" id="customSwitch2">
                                             <label class="custom-control-label" for="customSwitch2">Saturday</label>
-                                            
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                        </div>
+
+                                        <div class="custom-control custom-switch">
+
+                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Sunday" id="customSwitch3">
                                             <label class="custom-control-label" for="customSwitch3">Sunday</label>
                                         </div>
-                                    
                                     
                                     </div>
                                  
@@ -639,7 +643,7 @@
                                             <div class="card-body">
                                                
                                                 <div class="button-list">
-                                                    <button type="button" class="btn btn-primary btn-lg btn-block"><i class="feather icon-send mr-2"></i>
+                                                    <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="feather icon-send mr-2"></i>
                                                         Submit</button>
                                                </div>
                                             </div>
@@ -652,7 +656,7 @@
                            </div>
                         </div>
                     </div>
-                    
+                   </form>
                     <!-- End col -->
                     
                     
