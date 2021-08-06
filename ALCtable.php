@@ -1,7 +1,11 @@
+<?php
+    include 'ops/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Orbiter is a bootstrap minimal & clean admin template">
@@ -519,15 +523,35 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                       
+                                        <?php
+                                        //Displaying details of registration from database
+                                        $sql_eventreglist = "SELECT * FROM alcf2021_attendees";
+                                        $success_eventreglist = mysqli_query($link, $sql_eventreglist);
+                                        if ($success_eventreglist->num_rows > 0) {
+                                        $i = 1;
+                                        while ($row = $success_eventreglist->fetch_assoc()) {
+                                        ?>
                                         <tr>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
-                                            <td>27</td>
-                                            <td>2011/01/25</td>
-                                            <td>$112,000</td>
+                                            <th>No.</th>
+                                            <th>Code</th>
+                                            <th><?php echo $row['firstname']; ?></th>
+                                            <th><?php echo $row['lastname']; ?></th>
+                                            <th><?php echo $row['email']; ?></th>
+                                            <th><?php echo $row['telephone']; ?></th>
+                                            <th><?php echo $row['dob']; ?></th>
+                                            <th><?php echo $row['location']; ?></th>
+                                            <th><?php echo $row['source']; ?></th>
+                                            <th><?php echo $row['expectations']; ?></th>
+                                            <th><?php echo $row['attendance1']; ?></th>
+                                            <th><?php echo $row['attendance2']; ?></th>
+                                            <th><?php echo $row['attendance3']; ?></th>
+                                            <th><?php echo $row['registrar']; ?></th>
                                         </tr>
+                                        <?php
+                                        }
+                                        $i++;
+                                        }
+                                        ?>
                                         </tbody>
                                         <thead>
                                             <tr>

@@ -1,21 +1,28 @@
+<?php
+    include 'ops/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Orbiter is a bootstrap minimal & clean admin template">
     <meta name="keywords" content="admin, admin panel, admin template, admin dashboard, responsive, bootstrap 4, ui kits, ecommerce, web app, crm, cms, html, sass support, scss">
     <meta name="author" content="Themesbox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Orbiter - Bootstrap Minimal & Clean Admin Template</title>
+    <title>ALC tables</title>
     <!-- Fevicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Start css -->
     <!-- Switchery css -->
     <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet">
-    <!-- Calendar css -->
-    <link href="assets/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+    <!-- DataTables css -->
+    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive Datatable css -->
+    <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/flag-icon.min.css" rel="stylesheet" type="text/css">
@@ -464,12 +471,12 @@
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
-                        <h4 class="page-title">Calender</h4>
+                        <h4 class="page-title">The Abundant Life Conference 2021</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Apps</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Calender</li>
+                                <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
+                                <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">ALC 2021</li>
                             </ol>
                         </div>
                     </div>
@@ -482,51 +489,90 @@
             </div>
             <!-- End Breadcrumbbar -->
             <!-- Start Contentbar -->    
-            <div class="contentbar">
+            <div class="contentbar">                
                 <!-- Start row -->
                 <div class="row">
+                    
+                 
                     <!-- Start col -->
-                    <div class="col-12">                                 
-                        <div class="row">
-                             <div class="col-md-8 col-lg-9 col-xl-10">
-                                <div class="card m-b-30">
-                                    <div class="card-body">
-                                        <div id='calendar'></div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Data Export Table</h5>
                             </div>
-                            <div class="col-md-4 col-lg-3 col-xl-2">
-                                <div class="card m-b-30">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Created Events</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <form method="post" id="add_event_form" class="m-t-5 m-b-20">
-                                            <input type="text" class="form-control new-event-form" placeholder="Add new event..." />
-                                        </form>
-
-                                        <div id='external-events'>
-                                            <h4 class="m-b-15 font-16">Draggable Events</h4>
-                                            <div class='fc-event'>Birthday</div>
-                                            <div class='fc-event'>Sports</div>
-                                            <div class='fc-event'>Holiday</div>
-                                            <div class='fc-event'>Break Time</div>
-                                            <div class='fc-event'>Lunch</div>
-                                        </div>
-
-                                        <!-- checkbox -->
-                                        <div class="custom-control custom-checkbox mt-3">
-                                            <input type="checkbox" class="custom-control-input" id="drop-remove" data-parsley-multiple="groups" data-parsley-mincheck="2">
-                                            <label class="custom-control-label" for="drop-remove">Remove after drop</label>
-                                        </div>
-
-                                    </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle">Export data to Copy, CSV, Excel & Note.</h6>
+                                <div class="table-responsive">
+                                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                                        <thead>
+                                        <tr>
+                                                <th>No.</th>
+                                                <th>Code</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                                <th>Date of Birth</th>
+                                                <th>Location</th>
+                                                <th>Info about program</th>
+                                                <th>Expectations</th>
+                                                <th>Sunday</th>
+                                                <th>Registrar</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                        //Displaying details of registration from database
+                                        $sql_eventreglist = "SELECT * FROM alcf2021_attendees WHERE attendance3='Yes'";
+                                        $success_eventreglist = mysqli_query($link, $sql_eventreglist);
+                                        if ($success_eventreglist->num_rows > 0) {
+                                            $i = 1;
+                                            while ($row = $success_eventreglist->fetch_assoc()) {
+                                                ?>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>Code</th>
+                                                    <th><?php echo $row['firstname']; ?></th>
+                                                    <th><?php echo $row['lastname']; ?></th>
+                                                    <th><?php echo $row['email']; ?></th>
+                                                    <th><?php echo $row['telephone']; ?></th>
+                                                    <th><?php echo $row['dob']; ?></th>
+                                                    <th><?php echo $row['location']; ?></th>
+                                                    <th><?php echo $row['source']; ?></th>
+                                                    <th><?php echo $row['expectations']; ?></th>
+                                                    <th><?php echo $row['attendance3']; ?></th>
+                                                    <th><?php echo $row['registrar']; ?></th>
+                                                </tr>
+                                                <?php
+                                            }
+                                            $i++;
+                                        }
+                                        ?>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Code</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                                <th>Date of Birth</th>
+                                                <th>Location</th>
+                                                <th>Info about program</th>
+                                                <th>Expectations</th>
+                                                <th>Sunday</th>
+                                                <th>Registrar</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
                                 </div>
-                                <!-- end row -->
                             </div>
                         </div>
-                    </div> <!-- End col -->
-                </div> <!-- End row -->
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
             </div>
             <!-- End Contentbar -->
             <!-- Start Footerbar -->
@@ -550,16 +596,24 @@
     <script src="assets/js/vertical-menu.js"></script>
     <!-- Switchery js -->
     <script src="assets/plugins/switchery/switchery.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="assets/plugins/moment/moment.js"></script>    
-    <!-- Events js -->
-    <script src='assets/plugins/fullcalendar/js/fullcalendar.min.js'></script>
-    <script src="assets/js/custom/custom-calender.js"></script>
+    <!-- Datatable js -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/jszip.min.js"></script>
+    <script src="assets/plugins/datatables/pdfmake.min.js"></script>
+    <script src="assets/plugins/datatables/vfs_fonts.js"></script>
+    <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.print.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.colVis.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="assets/js/custom/custom-table-datatable.js"></script>
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     <!-- End js -->
 </body>
 
-<!-- Mirrored from themesbox.in/admin-templates/orbiter/html/light-vertical/apps-calender.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Jun 2021 18:40:18 GMT -->
+
 </html>
