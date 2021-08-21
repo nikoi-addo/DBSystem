@@ -318,6 +318,18 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <div class="col-lg-6 col-xl-3">
+                                     <div class="card m-b-30">
+                                        <div class="card-header">
+                                             <h5 class="card-title mb-0">Success message with ok button</h5>
+                                    </div>
+                                    <div class="card-body">
+                                <div class="sweet-alert">
+                                    <button type="button" class="btn btn-primary" id="sa-success">Show Demo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                             <?php
                         }
 
@@ -508,6 +520,7 @@
                                                         Submit</button>
                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                    
@@ -547,6 +560,9 @@
     <script src="assets/js/vertical-menu.js"></script>
     <!-- Switchery js -->
     <script src="assets/plugins/switchery/switchery.min.js"></script>
+    <!-- Sweet-Alert js -->
+    <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+    <script src="assets/js/custom/custom-sweet-alert.js"></script>
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     
