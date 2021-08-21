@@ -399,7 +399,7 @@
                                                 <th>DOB</th>
                                                 <th>Location</th>
                                                 <th>Info</th>
-                                                <th>Expectations</th>
+                                                
                                                 <th>Fri</th>
                                                 <th>Sat</th>
                                                 <th>Sun</th>
@@ -409,7 +409,7 @@
                                         <tbody>
                                         <?php
                                         //Displaying details of registration from database
-                                        $sql_eventreglist = "SELECT * FROM alcf2021_attendees";
+                                        $sql_eventreglist = "SELECT * FROM alc_2021_att";
                                         $success_eventreglist = mysqli_query($link, $sql_eventreglist);
                                         if ($success_eventreglist->num_rows > 0) {
                                         $i = 1;
@@ -425,7 +425,7 @@
                                             <th><?php echo $row['dob']; ?></th>
                                             <th><?php echo $row['location']; ?></th>
                                             <th><?php echo $row['source']; ?></th>
-                                            <th><?php echo $row['expectations']; ?></th>
+                                            
                                             <th><?php echo $row['attendance1']; ?></th>
                                             <th><?php echo $row['attendance2']; ?></th>
                                             <th><?php echo $row['attendance3']; ?></th>
@@ -448,7 +448,7 @@
                                                 <th>DOB</th>
                                                 <th>Location</th>
                                                 <th>Info</th>
-                                                <th>Expectations</th>
+                                                
                                                 <th>Fri</th>
                                                 <th>Sat</th>
                                                 <th>Sun</th>

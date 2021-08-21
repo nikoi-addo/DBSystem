@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-  $sql_insertregdetails = "INSERT INTO alcf2021_attendees (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, registrar ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$registrar')";
+  $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, registrar ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$registrar')";
     $success_insertregdetails = mysqli_query($link, $sql_insertregdetails);
     if ($success_insertregdetails) {
       $lastid = mysqli_insert_id($link);
