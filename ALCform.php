@@ -312,7 +312,7 @@
                         <?php
                             if(isset($_GET['rsp']) && $_GET['rsp'] == 0){
                         ?>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <strong>Congrats!</strong> Your registration code is ALC00<?php echo $_GET['regcode']; ?>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -446,7 +446,7 @@
                                         
                                        
                                     </div>
-                                    <div class="form-group col-md-6 smedia" id="sm">
+                                  <!--   <div class="form-group col-md-6 smedia" id="sm">
                                         <label for="socialmedia">Which Social Media Platform</label>
                                         <div class="custom-checkbox-button">
                                             <div class="form-check-inline checkbox-primary">
@@ -471,7 +471,7 @@
                                             </div>
                                         </div>
                                     
-                                    </div>
+                                    </div> -->
                                   
                                     <div class="form-group col-md-6" required>
                                         <label for="#">On which days will you be attending ALC 2021?</label>
