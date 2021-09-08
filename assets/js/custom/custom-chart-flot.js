@@ -243,61 +243,61 @@ $(document).ready(function() {
         },
         tooltip:true
     });    
-    /* -- Flot - Series Types Chart -- */
-    var seriesTypeData1 = [];
-    for (var i = 0; i < 14; i += 0.5) {
-        seriesTypeData1.push([i, Math.sin(i)]);
-    }
-    var seriesTypeData2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
-    var seriesTypeData3 = [];
-    for (var i = 0; i < 14; i += 0.5) {
-        seriesTypeData3.push([i, Math.cos(i)]);
-    }
-    var seriesTypeData4 = [];
-    for (var i = 0; i < 14; i += 0.1) {
-        seriesTypeData4.push([i, Math.sqrt(i * 10)]);
-    }
-    var seriesTypeData5 = [];
-    for (var i = 0; i < 14; i += 0.5) {
-        seriesTypeData5.push([i, Math.sqrt(i)]);
-    }
-    var seriesTypeData6 = [];
-    for (var i = 0; i < 14; i += 0.5 + Math.random()) {
-        seriesTypeData6.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
-    }
-    $.plot("#flot-series-types", [{
-        data: seriesTypeData1,
-        lines: { show: true, fill: true }
-    }, {
-        data: seriesTypeData2,
-        bars: { show: true }
-    }, {
-        data: seriesTypeData3,
-        points: { show: true }
-    }, {
-        data: seriesTypeData4,
-        lines: { show: true }
-    }, {
-        data: seriesTypeData5,
-        lines: { show: true },
-        points: { show: true }
-    }, {
-        data: seriesTypeData6,
-        lines: { show: true, steps: true }
-    }], {
-        colors: ["#0080ff", "#d4d8de", "#18d26b", "#ff3f3f", "#ffa800", "#00b8d4"],
-        grid: {
-            color: "rgba(0,0,0,0.1)",
-            borderWidth: 1,
-            borderColor: "rgba(0,0,0,0.05)"
-        },
-        yaxis: {
-            font: { color: "#8A98AC" }
-        },
-        xaxis: {
-            font: { color: "#8A98AC" }
-        },
-    });
+    // /* -- Flot - Series Types Chart -- */
+    // var seriesTypeData1 = [];
+    // for (var i = 0; i < 14; i += 0.5) {
+    //     seriesTypeData1.push([i, Math.sin(i)]);
+    // }
+    // var seriesTypeData2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+    // var seriesTypeData3 = [];
+    // for (var i = 0; i < 14; i += 0.5) {
+    //     seriesTypeData3.push([i, Math.cos(i)]);
+    // }
+    // var seriesTypeData4 = [];
+    // for (var i = 0; i < 14; i += 0.1) {
+    //     seriesTypeData4.push([i, Math.sqrt(i * 10)]);
+    // }
+    // var seriesTypeData5 = [];
+    // for (var i = 0; i < 14; i += 0.5) {
+    //     seriesTypeData5.push([i, Math.sqrt(i)]);
+    // }
+    // var seriesTypeData6 = [];
+    // for (var i = 0; i < 14; i += 0.5 + Math.random()) {
+    //     seriesTypeData6.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
+    // }
+    // $.plot("#flot-series-types", [{
+    //     data: seriesTypeData1,
+    //     lines: { show: true, fill: true }
+    // }, {
+    //     data: seriesTypeData2,
+    //     bars: { show: true }
+    // }, {
+    //     data: seriesTypeData3,
+    //     points: { show: true }
+    // }, {
+    //     data: seriesTypeData4,
+    //     lines: { show: true }
+    // }, {
+    //     data: seriesTypeData5,
+    //     lines: { show: true },
+    //     points: { show: true }
+    // }, {
+    //     data: seriesTypeData6,
+    //     lines: { show: true, steps: true }
+    // }], {
+    //     colors: ["#0080ff", "#d4d8de", "#18d26b", "#ff3f3f", "#ffa800", "#00b8d4"],
+    //     grid: {
+    //         color: "rgba(0,0,0,0.1)",
+    //         borderWidth: 1,
+    //         borderColor: "rgba(0,0,0,0.05)"
+    //     },
+    //     yaxis: {
+    //         font: { color: "#8A98AC" }
+    //     },
+    //     xaxis: {
+    //         font: { color: "#8A98AC" }
+    //     },
+    // });
     /* -- Flot - Error Bar Chart -- */
     function drawArrow(ctx, x, y, radius){
         ctx.beginPath();
