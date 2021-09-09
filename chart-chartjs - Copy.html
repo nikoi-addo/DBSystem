@@ -9,7 +9,7 @@
     <meta name="keywords" content="admin, admin panel, admin template, admin dashboard, responsive, bootstrap 4, ui kits, ecommerce, web app, crm, cms, html, sass support, scss">
     <meta name="author" content="Themesbox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>ALC 2021</title>
+    <title>Orbiter - Bootstrap Minimal & Clean Admin Template</title>
     <!-- Fevicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Start css -->
@@ -411,7 +411,19 @@
                                         </div>
                                     </div>
                                 </li>                                
-                              
+                                <li class="list-inline-item">
+                                    <div class="languagebar">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="languagelink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag flag-icon-us flag-icon-squared"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languagelink">
+                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-us flag-icon-squared"></i>English</a>
+                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-de flag-icon-squared"></i>German</a>
+                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-bl flag-icon-squared"></i>France</a>
+                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-ru flag-icon-squared"></i>Russian</a>                                                
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </li>
                                 <li class="list-inline-item">
                                     <div class="profilebar">
                                         <div class="dropdown">
@@ -451,12 +463,12 @@
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
-                        <h4 class="page-title">Flot</h4>
+                        <h4 class="page-title">Chartjs</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Charts</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Flot</li>
+                                <li class="breadcrumb-item active" aria-current="page">Chartjs</li>
                             </ol>
                         </div>
                     </div>
@@ -472,198 +484,242 @@
             <div class="contentbar">
                 <!-- Start row -->
                 <div class="row">
-                    
                     <!-- Start col -->
-                    <div class="col-lg-12 col-xl-4">
+                    <div class="col-lg-6">
                         <div class="card m-b-30">
                             <div class="card-header">
-                                <h5 class="card-title">Days Registered</h5>
-                            </div>
-                            <div class="card-body">  
-                                <div id="flot-pie-chart" class="flot-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End col -->
-                    <!-- Start col -->
-                    <div class="col-lg-12 col-xl-4">
-                        <div class="card m-b-30">
-                            <div class="card-header">
-                                <h5 class="card-title">Days Present/Registered</h5>
+                                <h5 class="card-title">Bubble Chart</h5>
                             </div>
                             <div class="card-body">
-                                <div id="apex-bar-chart"></div>
+                                <canvas id="chartjs-bubble-chart" class="chartjs-chart"></canvas>
                             </div>
                         </div>
                     </div>
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-12 col-xl-4">
+                    <div class="col-lg-6">
                         <div class="card m-b-30">
                             <div class="card-header">
-                                <h5 class="card-title">Days Present</h5>
-                            </div>
-                            <div class="card-body">   
-                                <div id="flot-donut-chart" class="flot-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End col -->
-
-                    <!-- Start col -->
-                    <div class="col-lg-12 col-xl-4">
-                        <div class="card m-b-30">
-                            <div class="card-header">                                
-                                <h5 class="card-title mb-0">Course</h5>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="course-slider">
-                                    <div class="course-slider-item">
-                                        <h4 class="my-0">Mathematics</h4>
-                                        <div class="row align-items-center my-4 py-3">
-                                            <div class="col-4 p-0">
-                                                <h4>24</h4>
-                                                <p class="mb-0">Faculty</p>
-                                            </div>
-                                            <div class="col-4 py-3 px-0 bg-primary-rgba rounded">
-                                                <h4 class="text-primary">543</h4>
-                                                <p class="text-primary mb-0">Students</p>
-                                            </div>
-                                            <div class="col-4 p-0">
-                                                <h4>09</h4>
-                                                <p class="mb-0">Class</p>
-                                            </div>
-                                        </div>
-                                        <div class="progress mb-2" style="height: 5px;">
-                                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-left">
-                                                <span class="font-13">80% Completed</span>
-                                            </div>
-                                            <div class="col-6 text-right">
-                                                <span class="font-13">19/25 Module</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-item">
-                                        <h4 class="my-0">Science</h4>
-                                        <div class="row align-items-center my-4 py-3">
-                                            <div class="col-4 p-0">
-                                                <h4>22</h4>
-                                                <p class="mb-0">Faculty</p>
-                                            </div>
-                                            <div class="col-4 py-3 px-0 bg-success-rgba rounded">
-                                                <h4 class="text-success">350</h4>
-                                                <p class="text-success mb-0">Students</p>
-                                            </div>
-                                            <div class="col-4 p-0">
-                                                <h4>05</h4>
-                                                <p class="mb-0">Class</p>
-                                            </div>
-                                        </div>
-                                        <div class="progress mb-2" style="height: 5px;">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-left">
-                                                <span class="font-13">70% Completed</span>
-                                            </div>
-                                            <div class="col-6 text-right">
-                                                <span class="font-13">17/25 Module</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-item">
-                                        <h4 class="my-0">English</h4>
-                                        <div class="row align-items-center my-4 py-3">
-                                            <div class="col-4 p-0">
-                                                <h4>18</h4>
-                                                <p class="mb-0">Faculty</p>
-                                            </div>
-                                            <div class="col-4 py-3 px-0 bg-secondary-rgba rounded">
-                                                <h4 class="text-secondary">470</h4>
-                                                <p class="text-secondary mb-0">Students</p>
-                                            </div>
-                                            <div class="col-4 p-0">
-                                                <h4>15</h4>
-                                                <p class="mb-0">Class</p>
-                                            </div>
-                                        </div>
-                                        <div class="progress mb-2" style="height: 5px;">
-                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-left">
-                                                <span class="font-13">60% Completed</span>
-                                            </div>
-                                            <div class="col-6 text-right">
-                                                <span class="font-13">15/25 Module</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                        
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End col -->
-                    <!-- Start col -->
-                    <div class="col-lg-12 col-xl-4">
-                        <div class="card m-b-30">
-                            <div class="card-header">                                
-                                <h5 class="card-title mb-0">Expectations</h5>
+                                <h5 class="card-title">Line Different Size Point Chart</h5>
                             </div>
                             <div class="card-body">
-                                <div class="parents-slider">
-                                    <div class="parents-slider-item">
-                                        <div class="row align-items-center">
-                                            <div class="col-12 col-md-4">
-                                                <img src="assets/images/general/parent_01.png" class="img-fluid" alt="parent">
-                                            </div>
-                                            <div class="col-12 col-md-8">
-                                                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                <h5 class="card-title mb-1">Ms. Jessica Matthew</h5>
-                                                <p class="mb-0 font-14 font-italic">Title + First Name + Last Name, ALC 001</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="parents-slider-item">
-                                        <div class="row align-items-center">
-                                            <div class="col-12 col-md-4">
-                                                <img src="assets/images/general/parent_02.png" class="img-fluid" alt="parent">
-                                            </div>
-                                            <div class="col-12 col-md-8">
-                                                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                <h5 class="card-title mb-1">Ms. John Doe</h5>
-                                                <p class="mb-0 font-14 font-italic">Father of Mila Doe, Class 5</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="parents-slider-item">
-                                        <div class="row align-items-center">
-                                            <div class="col-12 col-md-4">
-                                                <img src="assets/images/general/parent_03.png" class="img-fluid" alt="parent">
-                                            </div>
-                                            <div class="col-12 col-md-8">
-                                                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                                <h5 class="card-title mb-1">Ms. Maria Andrew</h5>
-                                                <p class="mb-0 font-14 font-italic">Mother of Will Andrew, Class 1</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <canvas id="chartjs-line-diff-size-point" class="chartjs-chart"></canvas>
                             </div>
                         </div>
                     </div>
                     <!-- End col -->
-                </div>
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Basic Line Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-basic-line" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Line Stepped Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-line-stepped" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Scatter Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-scatter-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Line Point Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-line-point" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Bar Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-bar-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Horizontal Bar Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-horizontal-bar-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Multi Axis Bar Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-multi-axis-bar-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Stacked Bar Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-stacked-bar-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Line Bar Mixed Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-line-bar-mixed-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Boundary Area Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-boundary-area-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Dataset Area Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-dataset-area-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Stacked Area Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-stacked-area-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Radar Area Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-radar-area-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Radar Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-radar-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Doughnut Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-doughnut-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Pie Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-pie-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Polar Area Chart</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-polar-area-chart" class="chartjs-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>                          
                 <!-- End row -->
             </div>
             <!-- End Contentbar -->
             <!-- Start Footerbar -->
             <div class="footerbar">
                 <footer class="footer">
-                    <p class="mb-0">© 2021 TTOC - All Rights Reserved.</p>
+                    <p class="mb-0">© 2020 Orbiter - All Rights Reserved.</p>
                 </footer>
             </div>
             <!-- End Footerbar -->
@@ -671,7 +727,7 @@
         <!-- End Rightbar -->
     </div>
     <!-- End Containerbar -->
-   <!-- Start js -->        
+    <!-- Start js -->        
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -681,41 +737,14 @@
     <script src="assets/js/vertical-menu.js"></script>
     <!-- Switchery js -->
     <script src="assets/plugins/switchery/switchery.min.js"></script>
-     <!-- Apex js -->
-    <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/plugins/apexcharts/irregular-data-series.js"></script> 
-    <script src="assets/js/custom/custom-chart-apex.js"></script>
-     <!-- Slick js -->
-    <script src="assets/plugins/slick/slick.min.js"></script>
-    <!-- To Do List js -->
-    <script src="assets/js/custom/custom-to-do-list.js"></script>
-    <!-- Custom Widget js -->
-    <script src="assets/js/custom/custom-widgets.js"></script>
-    <!-- Flot Chart JS -->
-    <script src="assets/plugins/flot-chart/jquery.flot.min.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script> 
-    <script src="assets/plugins/flot-chart/jquery.colorhelpers.js"></script>               
-    <script src="assets/plugins/flot-chart/jquery.flot.categories.js"></script>    
-    <script src="assets/plugins/flot-chart/jquery.flot.errorbars.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.fillbetween.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.image.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.navigate.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.orderBars.min.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.pie.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.resize.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.selection.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.stack.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.symbol.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.threshold.js"></script>                
-    <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
-    <script src="assets/plugins/flot-chart/jquery.flot.canvas.js"></script>  
-    <script src="assets/plugins/flot-chart/curvedLines.js"></script>   
-    <script src="assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>
-    <script src="assets/js/custom/custom-chart-flot.js"></script>
-    <!-- Core JS -->
+    <!-- Chart js -->
+    <script src="assets/plugins/chart.js/chart.min.js"></script>
+    <script src="assets/plugins/chart.js/chart-bundle.min.js"></script>
+    <script src="assets/js/custom/custom-chart-chartjs.js"></script>    
+    <!-- Core js -->
     <script src="assets/js/core.js"></script>
     <!-- End JS -->
 </body>
 
-
+<!-- Mirrored from themesbox.in/admin-templates/orbiter/html/light-vertical/chart-chartjs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Jun 2021 18:40:56 GMT -->
 </html>
