@@ -429,7 +429,7 @@
                                             <th><?php echo $row['attendance1']; ?></th>
                                             <th><?php echo $row['attendance2']; ?></th>
                                             <th><?php echo $row['attendance3']; ?></th>
-                                            <th><?php echo $row['registrar']; ?></th>
+                                            <th><?php echo $row['assembly']; ?></th>
                                         </tr>
                                         <?php
                                         }

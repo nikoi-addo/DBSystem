@@ -126,7 +126,7 @@
                                     </div>
                                      <div class="form-group col-md-6">
                                         <label for="firstname">Assembly of Fellowship</label>
-                                        <input type="text" class="form-control" name="church" id="church" placeholder="eg. The Temple of Charis" required>
+                                        <input type="text" class="form-control" name="assembly" id="assembly" placeholder="eg. The Temple of Charis" required>
                                     </div>
                                 </div>
                             </div>

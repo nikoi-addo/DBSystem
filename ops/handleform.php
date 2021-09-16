@@ -62,12 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $expectations = $_POST['expectations'];
     $expectations = mysqli_real_escape_string($link, $expectations);
 
-    $registrar = "Kwabena";
+    $assembly = "Kwabena";
 
 
 
 
-  $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, registrar ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$registrar')";
+  $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, assembly ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$assembly')";
     $success_insertregdetails = mysqli_query($link, $sql_insertregdetails);
     if ($success_insertregdetails) {
       $lastid = mysqli_insert_id($link);
