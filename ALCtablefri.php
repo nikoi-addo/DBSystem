@@ -523,7 +523,7 @@
                                         <tbody>
                                         <?php
                                         //Displaying details of registration from database
-                                        $sql_eventreglist = "SELECT * FROM alcf2021_attendees WHERE attendance1='Yes'";
+                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE attendance1='Yes'";
                                         $success_eventreglist = mysqli_query($link, $sql_eventreglist);
                                         if ($success_eventreglist->num_rows > 0) {
                                             $i = 1;
@@ -541,7 +541,7 @@
                                                     <th><?php echo $row['source']; ?></th>
                                                     <th><?php echo $row['expectations']; ?></th>
                                                     <th><?php echo $row['attendance1']; ?></th>
-                                                    <th><?php echo $row['registrar']; ?></th>
+                                                    <th><?php echo $row['assembly']; ?></th>
                                                 </tr>
                                                 <?php
                                             }

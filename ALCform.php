@@ -88,7 +88,7 @@
                     <!-- End col -->
                     <!-- Start col -->
 
-                    <form method="post" action="ops/handleform.php">
+                    <form method="post" id="attendance_form">
                     <div class="col-lg-12">
                         <div class="card m-b-30">
                             <div class="card-header">
@@ -125,7 +125,7 @@
                                         
                                     </div>
                                      <div class="form-group col-md-6">
-                                        <label for="firstname">Assembly of Fellowship</label>
+                                        <label for="assembly">Assembly of Fellowship</label>
                                         <input type="text" class="form-control" name="assembly" id="assembly" placeholder="eg. The Temple of Charis" required>
                                     </div>
                                 </div>
@@ -189,32 +189,7 @@
                                         
                                        
                                     </div>
-                                  <!--   <div class="form-group col-md-6 smedia" id="sm">
-                                        <label for="socialmedia">Which Social Media Platform</label>
-                                        <div class="custom-checkbox-button">
-                                            <div class="form-check-inline checkbox-primary">
-                                                <input type="checkbox" id="facebook" name="socialmedia" value="facebook">
-                                                <label for="facebook">&nbsp; Facebook</label>
-                                            </div>
-                                            <div class="form-check-inline checkbox-success">
-                                                <input type="checkbox" id="whatsapp" name="socialmedia" value="whatsapp">
-                                                <label for="whatsapp">&nbsp; Whatsapp</label>
-                                            </div>
-                                            <div class="form-check-inline checkbox-danger">
-                                                <input type="checkbox" id="instagram" name="socialmedia" value="instagram">
-                                                <label for="instagram">&nbsp; Instagram</label>
-                                            </div>
-                                            <div class="form-check-inline checkbox-warning">
-                                                <input type="checkbox" id="snapchat" name="socialmedia" value="snapchat">
-                                                <label for="snapchat">&nbsp; Snapchat</label>
-                                            </div>
-                                            <div class="form-check-inline checkbox-info">
-                                                <input type="checkbox" id="twitter" name="socialmedia" value="twitter">
-                                                <label for="twitter">&nbsp; Twitter</label>
-                                            </div>
-                                        </div>
-                                    
-                                    </div> -->
+
                                   
                                     <div class="form-group col-md-6" required>
                                         <label for="#">On which days will you be attending ALC 2021?</label>
@@ -281,6 +256,8 @@
         <!-- End Rightbar -->
     </div>
     <!-- End Containerbar -->
+
+    
     <!-- Start js -->        
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -297,6 +274,27 @@
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     
+    <script>
+    $(document).ready(function(){
+        $('#attendance_form').on('submit',function(e) {  //Don't foget to change the id form
+        $.ajax({
+            url:'ops/handleform.php', //===PHP file name====
+            data:$(this).serialize(),
+            type:'POST',
+            success:function(data){
+            console.log(data);
+            //Success Message == 'Title', 'Message body', Last one leave as it is
+	        swal("¡Success!", "Message sent!", "success");
+        },
+        error:function(data){
+            //Error Message == 'Title', 'Message body', Last one leave as it is
+	        swal("Oops...", "Something went wrong :(", "error");
+        }
+        });
+        e.preventDefault(); //This is to Avoid Page Refresh and Fire the Event "Click"
+        });
+    });
+    </script>   
     
     <!-- End js -->  
 </body>

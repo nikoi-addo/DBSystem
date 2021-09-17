@@ -1,4 +1,4 @@
-CREATE TABLE `alcf2021_attendees` (
+CREATE TABLE `alc_2021_att` (
   `id` int(16) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(32) NOT NULL,
   `lastname` varchar(32) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `alcf2021_attendees` (
   `attendance3` varchar(3) NOT NULL DEFAULT 'No',
   `expectations` text NOT NULL,
   `source` varchar(32) NOT NULL,
-  `registrar` varchar(32) NOT NULL,
+  `assembly` varchar(32) NOT NULL,
   `dateregistered` DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );

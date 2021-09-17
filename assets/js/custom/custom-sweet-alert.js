@@ -206,4 +206,29 @@
                 }
             }])
         });
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const regcode = urlParams.get('regcode');
+        if(regcode!== null){
+
+            Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            });
+
+            // $(document).ready(function()
+
+            //     swal({
+            //         position: "top-end",
+            //         type: "success",
+            //         title: "Your work has been saved",
+            //         showConfirmButton: false,
+            //         timer: 1500
+            //         })
+            // });
+        }
 })(jQuery)

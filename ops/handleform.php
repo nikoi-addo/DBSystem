@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $location = $_POST['location'];
     $location = mysqli_real_escape_string($link, $location);
 
-  $socialmedia = $_POST['socialmedia'];
+  // $socialmedia = $_POST['socialmedia'];
     $firstname = mysqli_real_escape_string($link, $firstname);
 
     if ($_POST['customradio'] == "Social Media"){
@@ -73,12 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $lastid = mysqli_insert_id($link);
       header("location:../ALCform.php?rsp=0&regcode=". $lastid);
     }
-    else {
-      echo mysqli_error($link);
-//      header("location:../ALCform.php?rsp=1");
-
-    }
-
+  
   }
 
 ?>
