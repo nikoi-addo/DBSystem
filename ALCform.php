@@ -1,3 +1,6 @@
+<?php
+    include 'ops/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,14 +85,34 @@
             <?php
                 if(isset($_GET['regcode'])){
                     $registrationcode = "ALC000" . $_GET['regcode'];
+                    
+                                        
                 ?>
-                <div class="alert alert-success">
-                    <p class="title">Congratulations Your Registration is Complete</p>
-                    <h1>Your Code is <u><?php echo $registrationcode; ?></u></h1>
-                    <p><i>Pleae Keep your code as you will use that on the day of registration.</i></p>
+                
+                
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="responsible">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleLargeModalLabel">Registration Complete</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <p class="title">Congratulations!!!</p>
+                            <h1>Your Code is <u><b><?php echo $registrationcode; ?></b></u></h1>
+                            <p><i>Please Keep your code as you will use that on the day of registration.</i></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <?php
-                }
+                    }
                 ?>
                 <!-- Start row -->
                 <div class="row">
@@ -105,6 +128,7 @@
                         <div class="card m-b-30">
                             <div class="card-header">
                                 <h5 class="card-title">Basic Information</h5>
+                                
                             </div>
                             <div class="card-body">
                                
@@ -286,7 +310,14 @@
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     
-    
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const regcode = urlParams.get('regcode')
+        if(regcode !== null){
+            $('#responsible').modal('show');
+        }
+    </script>
     <!-- End js -->  
 </body>
 
