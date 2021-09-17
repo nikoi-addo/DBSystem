@@ -79,6 +79,18 @@
            
             <!-- Start Contentbar -->    
             <div class="contentbar">
+            <?php
+                if(isset($_GET['regcode'])){
+                    $registrationcode = "ALC000" . $_GET['regcode'];
+                ?>
+                <div class="alert alert-success">
+                    <p class="title">Congratulations Your Registration is Complete</p>
+                    <h1>Your Code is <u><?php echo $registrationcode; ?></u></h1>
+                    <p><i>Pleae Keep your code as you will use that on the day of registration.</i></p>
+                </div>
+                <?php
+                }
+                ?>
                 <!-- Start row -->
                 <div class="row">
                     <!-- Start col -->
@@ -88,7 +100,7 @@
                     <!-- End col -->
                     <!-- Start col -->
 
-                    <form method="post" id="attendance_form">
+                    <form method="post" id="attendance_form" action="ops/handleform.php">
                     <div class="col-lg-12">
                         <div class="card m-b-30">
                             <div class="card-header">
@@ -195,20 +207,20 @@
                                         <label for="#">On which days will you be attending ALC 2021?</label>
                                         <div class="custom-control custom-switch">
 
-                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Friday" id="customSwitch1">
+                                            <input type="checkbox" class="custom-control-input" name="attendance1" value="Friday" id="customSwitch1">
                                             <label class="custom-control-label" for="customSwitch1">Friday</label>
 
                                         </div>
 
                                         <div class="custom-control custom-switch">
                                             
-                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Saturday" id="customSwitch2">
+                                            <input type="checkbox" class="custom-control-input" name="attendance2" value="Saturday" id="customSwitch2">
                                             <label class="custom-control-label" for="customSwitch2">Saturday</label>
                                         </div>
 
                                         <div class="custom-control custom-switch">
 
-                                            <input type="checkbox" class="custom-control-input" name="attendance" value="Sunday" id="customSwitch3">
+                                            <input type="checkbox" class="custom-control-input" name="attendance3" value="Sunday" id="customSwitch3">
                                             <label class="custom-control-label" for="customSwitch3">Sunday</label>
                                         </div>
                                     
@@ -274,27 +286,6 @@
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     
-    <script>
-    $(document).ready(function(){
-        $('#attendance_form').on('submit',function(e) {  //Don't foget to change the id form
-        $.ajax({
-            url:'ops/handleform.php', //===PHP file name====
-            data:$(this).serialize(),
-            type:'POST',
-            success:function(data){
-            console.log(data);
-            //Success Message == 'Title', 'Message body', Last one leave as it is
-	        swal("¡Success!", "Message sent!", "success");
-        },
-        error:function(data){
-            //Error Message == 'Title', 'Message body', Last one leave as it is
-	        swal("Oops...", "Something went wrong :(", "error");
-        }
-        });
-        e.preventDefault(); //This is to Avoid Page Refresh and Fire the Event "Click"
-        });
-    });
-    </script>   
     
     <!-- End js -->  
 </body>

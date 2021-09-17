@@ -49,20 +49,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $source = "Other";
     }
 
-    if ($_POST['attendance'] == "Friday") {
+    if ($_POST['attendance1'] == "Friday") {
       $attendance1 = "Yes";
     }
-    if ($_POST['attendance'] == "Saturday") {
+    if ($_POST['attendance2'] == "Saturday") {
       $attendance2 = "Yes";
     }
-    if ($_POST['attendance'] == "Sunday") {
+    if ($_POST['attendance3'] == "Sunday") {
       $attendance3 = "Yes";
     }
 
     $expectations = $_POST['expectations'];
     $expectations = mysqli_real_escape_string($link, $expectations);
-
-    $assembly = "Kwabena";
+    
+    $assembly = $_POST['expectations'];
+    $assembly = mysqli_real_escape_string($link, $assembly);
 
 
 
