@@ -506,7 +506,7 @@
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                                <th>No.</th>
+                                                
                                                 <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -515,9 +515,8 @@
                                                 <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Expectations</th>
                                                 <th>Sunday</th>
-                                                <th>Registrar</th>
+                                                <th>Assembly</th>
                                         </tr>
                                         </thead>
                                         <tbody>

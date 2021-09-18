@@ -419,19 +419,7 @@
                                         </div>
                                     </div>
                                 </li>                                
-                                <li class="list-inline-item">
-                                    <div class="languagebar">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle" href="#" role="button" id="languagelink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag flag-icon-us flag-icon-squared"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languagelink">
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-us flag-icon-squared"></i>English</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-de flag-icon-squared"></i>German</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-bl flag-icon-squared"></i>France</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-ru flag-icon-squared"></i>Russian</a>                                                
-                                            </div>
-                                        </div>
-                                    </div>                                   
-                                </li>
+                                
                                 <li class="list-inline-item">
                                     <div class="profilebar">
                                         <div class="dropdown">
@@ -476,15 +464,11 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
                                 <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">ALC 2021 - Day 2(Saturday)</li>
+                                <li class="breadcrumb-item active" aria-current="page">ALC 2021 - Day 3 (SUNDAY)</li>
                             </ol>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="widgetbar">
-                            <button class="btn btn-primary-rgba"><i class="feather icon-plus mr-2"></i>Actions</button>
-                        </div>                        
-                    </div>
+                    
                 </div>          
             </div>
             <!-- End Breadcrumbbar -->
@@ -498,7 +482,7 @@
                     <div class="col-lg-12">
                         <div class="card m-b-30">
                             <div class="card-header">
-                                <h5 class="card-title">Data Export Table</h5>
+                                <h5 class="card-title">ATTENDEES PRESENT ON SUNDAY (03/10/2021</h5>
                             </div>
                             <div class="card-body">
                                 <h6 class="card-subtitle">Export data to Copy, CSV, Excel & Note.</h6>
@@ -506,7 +490,7 @@
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                               
+                                                
                                                 <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -515,14 +499,14 @@
                                                 <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Saturday</th>
+                                                <th>Friday</th>
                                                 <th>Assembly</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <?php
                                         //Displaying details of registration from database
-                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE attendance2='Yes'";
+                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE attendance1='Yes'";
                                         $success_eventreglist = mysqli_query($link, $sql_eventreglist);
                                         if ($success_eventreglist->num_rows > 0) {
                                             $i = 1;
@@ -539,7 +523,7 @@
                                                     <th><?php echo $row['location']; ?></th>
                                                     <th><?php echo $row['source']; ?></th>
                                                     <th><?php echo $row['expectations']; ?></th>
-                                                    <th><?php echo $row['attendance2']; ?></th>
+                                                    <th><?php echo $row['attendance1']; ?></th>
                                                     <th><?php echo $row['assembly']; ?></th>
                                                 </tr>
                                                 <?php
@@ -560,7 +544,7 @@
                                                 <th>Location</th>
                                                 <th>Info about program</th>
                                                 <th>Expectations</th>
-                                                <th>Saturday</th>
+                                                <th>Friday</th>
                                                 <th>Registrar</th>
                                             </tr>
                                         </thead>
