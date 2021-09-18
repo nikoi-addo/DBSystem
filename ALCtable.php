@@ -390,8 +390,7 @@
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                                <th>No.</th>
-                                                <th>Code</th>
+                                                 <th>Code</th>
                                                 <th>FName</th>
                                                 <th>LName</th>
                                                 <th>Email</th>
@@ -399,7 +398,6 @@
                                                 <th>DOB</th>
                                                 <th>Location</th>
                                                 <th>Info</th>
-                                                
                                                 <th>Fri</th>
                                                 <th>Sat</th>
                                                 <th>Sun</th>
