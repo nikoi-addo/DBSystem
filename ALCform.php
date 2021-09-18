@@ -100,7 +100,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                            <p class="title">Congratulations!!!</p>
+                            <p class="title"><h3>Congratulations!!! </h3></p>
                             <h1>Your Code is <u><b><?php echo $registrationcode; ?></b></u></h1>
                             <p><i>Please Keep your code as you will use that on the day of registration.</i></p>
                             </div>
