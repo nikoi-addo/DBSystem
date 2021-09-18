@@ -84,7 +84,7 @@
             <div class="contentbar">
             <?php
                 if(isset($_GET['regcode'])){
-                    $registrationcode = "ALC000" . $_GET['regcode'];
+                    $registrationcode = "ALC00" . $_GET['regcode'];
                     
                                         
                 ?>

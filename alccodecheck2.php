@@ -1,3 +1,12 @@
+<?php
+    if(isset($_GET['uc'])){
+        include 'ops/db.php';
+        
+        $usercode = $_GET['uc'];
+        $concusercode = substr("$usercode", 5);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -406,17 +415,46 @@
                             <div class="card-body">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8 col-xl-6">
-                                        <form id="basic-form-wizard" action="#">
+                                        <form id="basic-form-wizard" action="ops/verifycode2.php" method="post">
                                             <div>
                                                 <h3>Hints</h3>
                                                 <section>
-                                                    <h4 class="font-22 mb-3">See Your Hints !!!</h4>
-                                                    <ul>
-                                                        <li><strong>First Name :</strong> John</li>
-                                                        <li><strong>Last Name :</strong> Doe</li>
-                                                        <li><strong>Email ID :</strong> johndoe@gmail.com</li>
-                                                        <li><strong>ALC CODE :</strong> 123, Street, City.</li>
-                                                    </ul>
+                                                    <h4 class="font-22 mb-3">User Details</h4>
+                                                    <?php
+                                                        //Displaying details of registration from database
+                                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE id=$concusercode";
+                                                        $success_eventreglist = mysqli_query($link, $sql_eventreglist);
+                                                        if ($success_eventreglist->num_rows > 0) {
+                                                            while ($row = $success_eventreglist->fetch_assoc()) {
+                                                    ?>
+                                                        <ul>
+                                                            <li><strong>First Name :</strong> <?php echo $row['firstname']; ?></li>
+                                                            <li><strong>Last Name :</strong> <?php echo $row['lastname']; ?></li>
+                                                            <li><strong>Email ID :</strong> <?php echo $row['email']; ?></li>
+                                                            <li><strong>ALC CODE :</strong> <?php echo $usercode; ?></li>
+                                                        </ul>
+                                                    <?php
+                                                            }
+                                                        }
+                                                      ?>
+                                                </section>
+                                                <h3>Finish</h3>
+                                                <section>
+                                                    <h4 class="font-22 mb-3">Select Date</h4>
+                                                    <input type="hidden" name="usercode" value="<?php echo $usercode; ?>">
+
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio3" name="attenddate" class="custom-control-input" value="present1">
+                                                        <label class="custom-control-label" for="radio3">FRIDAY 1ST OCTOBER, 2021</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio4" name="attenddate" class="custom-control-input" value="present2">
+                                                        <label class="custom-control-label" for="radio4">SATURDAY 2ND OCTOBER, 2021</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio5" name="attenddate" class="custom-control-input" value="present3">
+                                                        <label class="custom-control-label" for="radio5">SUNDAY 3RD OCTOBER, 2021</label>
+                                                    </div>
                                                 </section>
                                             </div>
                                         </form>  
@@ -459,3 +497,10 @@
 </body>
 
 </html>
+
+<?php
+    }
+    else{
+        header("location:../alccodecheck1.php?fail");
+    }
+?>

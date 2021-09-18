@@ -529,8 +529,7 @@
                                             while ($row = $success_eventreglist->fetch_assoc()) {
                                                 ?>
                                                 <tr>
-                                                    <th>No.</th>
-                                                    <th>Code</th>
+                                                    <th>ALC000<?php echo $row['id'];?></th>
                                                     <th><?php echo $row['firstname']; ?></th>
                                                     <th><?php echo $row['lastname']; ?></th>
                                                     <th><?php echo $row['email']; ?></th>
@@ -538,7 +537,6 @@
                                                     <th><?php echo $row['dob']; ?></th>
                                                     <th><?php echo $row['location']; ?></th>
                                                     <th><?php echo $row['source']; ?></th>
-                                                    <th><?php echo $row['expectations']; ?></th>
                                                     <th><?php echo $row['attendance3']; ?></th>
                                                     <th><?php echo $row['assembly']; ?></th>
                                                 </tr>
@@ -550,7 +548,6 @@
                                         </tbody>
                                         <thead>
                                             <tr>
-                                                <th>No.</th>
                                                 <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -559,9 +556,8 @@
                                                 <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Expectations</th>
-                                                <th>Sunday</th>
-                                                <th>Registrar</th>
+                                                <th>Friday</th>
+                                                <th>Assembly</th>
                                             </tr>
                                         </thead>
                                     </table>

@@ -493,8 +493,7 @@
                                 <div class="table-responsive">
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
-                                        <tr>
-                                                
+                                        <tr> 
                                                 <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -510,7 +509,7 @@
                                         <tbody>
                                         <?php
                                         //Displaying details of registration from database
-                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE attendance1='Yes'";
+                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE present1='Yes'";
                                         $success_eventreglist = mysqli_query($link, $sql_eventreglist);
                                         if ($success_eventreglist->num_rows > 0) {
                                             $i = 1;
@@ -525,8 +524,7 @@
                                                     <th><?php echo $row['dob']; ?></th>
                                                     <th><?php echo $row['location']; ?></th>
                                                     <th><?php echo $row['source']; ?></th>
-                                                    <th><?php echo $row['expectations']; ?></th>
-                                                    <th><?php echo $row['attendance1']; ?></th>
+                                                    <th><?php echo $row['present1']; ?></th>
                                                     <th><?php echo $row['assembly']; ?></th>
                                                 </tr>
                                                 <?php
@@ -537,8 +535,7 @@
                                         </tbody>
                                         <thead>
                                             <tr>
-                                                <th>No.</th>
-                                                <th>Code</th>
+                                            <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
@@ -546,9 +543,8 @@
                                                 <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Expectations</th>
                                                 <th>Friday</th>
-                                                <th>Registrar</th>
+                                                <th>Assembly</th>
                                             </tr>
                                         </thead>
                                     </table>

@@ -549,7 +549,6 @@
                                         </tbody>
                                         <thead>
                                             <tr>
-                                                <th>No.</th>
                                                 <th>Code</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
@@ -558,9 +557,8 @@
                                                 <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Expectations</th>
-                                                <th>Saturday</th>
-                                                <th>Registrar</th>
+                                                <th>Friday</th>
+                                                <th>Assembly</th>
                                             </tr>
                                         </thead>
                                     </table>

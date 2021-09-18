@@ -395,6 +395,50 @@
             <!-- End Breadcrumbbar -->
             <!-- Start Contentbar -->    
             <div class="contentbar">
+            <?php
+                if(isset($_GET['uc'])){
+                    $registrationcode = "ALC00" . $_GET['uc'];
+                    
+                                        
+                ?>
+                
+                
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="responsible">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleLargeModalLabel">Registration Complete</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <p class="title"><h3>Congratulations!!! </h3></p>
+                            <h1><u><b><?php echo $registrationcode; ?></b></u> has been registered for
+                             <?php
+                                if($_GET['da'] == 1){
+                                    echo "FRIDAY 1ST OCTOBER, 2021";
+                                }
+                                if($_GET['da'] == 2){
+                                    echo "SATURDAY 2ND OCTOBER, 2021";
+                                }
+                                if($_GET['da'] == 3){
+                                    echo "SUNDAY 3RD OCTOBER, 2021";
+                                }
+                             ?>   
+                        
+                            </h1>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php
+                    }
+                ?>
                 <!-- Start row -->
                 <div class="row">
                     <!-- End col -->
@@ -406,14 +450,19 @@
                             <div class="card-body">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8 col-xl-6">
-                                        <form id="basic-form-wizard" action="#">
+                                        <form id="basic-form-wizard" name="codecheck" action="ops/verifycode1.php" method="POST">
                                             <div>
                                                 <h3>Start</h3>
                                                 <section>
-                                                    <h4 class="font-22 mb-3">Please Enter the ALC CODE !!!</h4>
+                                                    <?php if(isset($_GET['fail'])){
+                                                    ?>
+                                                    <div class="alert alert-danger">Code Entered is incorrect!!! Try again!!!</div>
+                                                    <?php
+                                                    }?>
+                                                    <h4 class="font-22 mb-3">Please Enter the ALC CODE!!!</h4>
                                                     <div class="form-group">
                                                         <label for="username">ALC CODE :</label>
-                                                        <input type="text" class="form-control" id="username">
+                                                        <input type="text" class="form-control" id="username" name="usercode" required>
                                                     </div>
                                                    
                                                 </section>
@@ -455,6 +504,15 @@
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     <!-- End js -->
+
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const regcode = urlParams.get('uc')
+        if(regcode !== null){
+            $('#responsible').modal('show');
+        }
+    </script>
 </body>
 
 </html>
