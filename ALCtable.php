@@ -414,8 +414,7 @@
                                         while ($row = $success_eventreglist->fetch_assoc()) {
                                         ?>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Code</th>
+                                            <th>ALC000<?php echo $row['id'];?></th>
                                             <th><?php echo $row['firstname']; ?></th>
                                             <th><?php echo $row['lastname']; ?></th>
                                             <th><?php echo $row['email']; ?></th>
@@ -423,7 +422,6 @@
                                             <th><?php echo $row['dob']; ?></th>
                                             <th><?php echo $row['location']; ?></th>
                                             <th><?php echo $row['source']; ?></th>
-                                            
                                             <th><?php echo $row['attendance1']; ?></th>
                                             <th><?php echo $row['attendance2']; ?></th>
                                             <th><?php echo $row['attendance3']; ?></th>

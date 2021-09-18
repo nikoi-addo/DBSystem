@@ -1,28 +1,20 @@
-<?php
-    include 'ops/db.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Orbiter is a bootstrap minimal & clean admin template">
     <meta name="keywords" content="admin, admin panel, admin template, admin dashboard, responsive, bootstrap 4, ui kits, ecommerce, web app, crm, cms, html, sass support, scss">
     <meta name="author" content="Themesbox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>ALC tables</title>
+    <title>Orbiter - Bootstrap Minimal & Clean Admin Template</title>
     <!-- Fevicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Start css -->
     <!-- Switchery css -->
     <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet">
-    <!-- DataTables css -->
-    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <!-- Responsive Datatable css -->
-    <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/flag-icon.min.css" rel="stylesheet" type="text/css">
@@ -343,95 +335,12 @@
                 <div class="row align-items-center">
                     <!-- Start col -->
                     <div class="col-md-12 align-self-center">
-                        <div class="togglebar">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item">
-                                    <div class="menubar">
-                                        <a class="menu-hamburger" href="javascript:void();">
-                                           <img src="assets/images/svg-icon/collapse.svg" class="img-fluid menu-hamburger-collapse" alt="collapse">
-                                           <img src="assets/images/svg-icon/close.svg" class="img-fluid menu-hamburger-close" alt="close">
-                                         </a>
-                                     </div>
-                                </li>
-                                <li class="list-inline-item">
-                                    <div class="searchbar">
-                                        <form>
-                                            <div class="input-group">
-                                              <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                                              <div class="input-group-append">
-                                                <button class="btn" type="submit" id="button-addon2"><img src="assets/images/svg-icon/search.svg" class="img-fluid" alt="search"></button>
-                                              </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        
                         <div class="infobar">
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item">
-                                    <div class="settingbar">
-                                        <a href="javascript:void(0)" id="infobar-settings-open" class="infobar-icon">
-                                            <img src="assets/images/svg-icon/settings.svg" class="img-fluid" alt="settings">
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="list-inline-item">
-                                    <div class="notifybar">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle infobar-icon" href="#" role="button" id="notoficationlink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/svg-icon/notifications.svg" class="img-fluid" alt="notifications">
-                                            <span class="live-icon"></span></a>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notoficationlink">
-                                                <div class="notification-dropdown-title">
-                                                    <h4>Notifications</h4>                            
-                                                </div>
-                                                <ul class="list-unstyled">                                                    
-                                                    <li class="media dropdown-item">
-                                                        <span class="action-icon badge badge-primary-inverse"><i class="feather icon-dollar-sign"></i></span>
-                                                        <div class="media-body">
-                                                            <h5 class="action-title">$135 received</h5>
-                                                            <p><span class="timing">Today, 10:45 AM</span></p>                            
-                                                        </div>
-                                                    </li>
-                                                    <li class="media dropdown-item">
-                                                        <span class="action-icon badge badge-success-inverse"><i class="feather icon-file"></i></span>
-                                                        <div class="media-body">
-                                                            <h5 class="action-title">Project X prototype approved</h5>
-                                                            <p><span class="timing">Yesterday, 01:40 PM</span></p>                            
-                                                        </div>
-                                                    </li>
-                                                    <li class="media dropdown-item">
-                                                        <span class="action-icon badge badge-danger-inverse"><i class="feather icon-eye"></i></span>
-                                                        <div class="media-body">
-                                                            <h5 class="action-title">John requested to view wireframe</h5>
-                                                            <p><span class="timing">3 Sep 2019, 05:22 PM</span></p>                            
-                                                        </div>
-                                                    </li>
-                                                    <li class="media dropdown-item">
-                                                        <span class="action-icon badge badge-warning-inverse"><i class="feather icon-package"></i></span>
-                                                        <div class="media-body">
-                                                            <h5 class="action-title">Sports shoes are out of stock</h5>
-                                                            <p><span class="timing">15 Sep 2019, 02:55 PM</span></p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>                                
-                                <li class="list-inline-item">
-                                    <div class="languagebar">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle" href="#" role="button" id="languagelink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag flag-icon-us flag-icon-squared"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languagelink">
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-us flag-icon-squared"></i>English</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-de flag-icon-squared"></i>German</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-bl flag-icon-squared"></i>France</a>
-                                                <a class="dropdown-item" href="#"><i class="flag flag-icon-ru flag-icon-squared"></i>Russian</a>                                                
-                                            </div>
-                                        </div>
-                                    </div>                                   
-                                </li>
+                                
+                                                          
+                               
                                 <li class="list-inline-item">
                                     <div class="profilebar">
                                         <div class="dropdown">
@@ -471,115 +380,57 @@
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
-                        <h4 class="page-title">The Abundant Life Conference 2021</h4>
+                        <h4 class="page-title">THE ABUNDANT LIFE CONFERENCE 2021</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
-                                <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">ALC 2021 - Day 1(Friday)</li>
+                                <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
+                                <li class="breadcrumb-item"><a href="alccodesearch.html">Code Search</a></li>
+                                <li class="breadcrumb-item active" aria-current="CodeCheck">Code Check</li>
                             </ol>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="widgetbar">
-                            <button class="btn btn-primary-rgba"><i class="feather icon-plus mr-2"></i>Actions</button>
-                        </div>                        
-                    </div>
+                    
                 </div>          
             </div>
             <!-- End Breadcrumbbar -->
             <!-- Start Contentbar -->    
-            <div class="contentbar">                
+            <div class="contentbar">
                 <!-- Start row -->
                 <div class="row">
-                    
-                 
-                    <!-- Start col -->
+                    <!-- End col -->
                     <div class="col-lg-12">
                         <div class="card m-b-30">
                             <div class="card-header">
-                                <h5 class="card-title">Data Export Table</h5>
+                                <h5 class="card-title">CodeCheck Portal</h5>
                             </div>
                             <div class="card-body">
-                                <h6 class="card-subtitle">Export data to Copy, CSV, Excel & Note.</h6>
-                                <div class="table-responsive">
-                                    <table id="datatable-buttons" class="table table-striped table-bordered">
-                                        <thead>
-                                        <tr>
-                                                
-                                                <th>Code</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                                <th>Phone Number</th>
-                                                <th>Date of Birth</th>
-                                                <th>Location</th>
-                                                <th>Info about program</th>
-                                                <th>Friday</th>
-                                                <th>Assembly</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php
-                                        //Displaying details of registration from database
-                                        $sql_eventreglist = "SELECT * FROM alc_2021_att WHERE attendance1='Yes'";
-                                        $success_eventreglist = mysqli_query($link, $sql_eventreglist);
-                                        if ($success_eventreglist->num_rows > 0) {
-                                            $i = 1;
-                                            while ($row = $success_eventreglist->fetch_assoc()) {
-                                                ?>
-                                                <tr>
-                                                    <th>ALC000<?php echo $row['id'];?></th>
-                                                    <th><?php echo $row['firstname']; ?></th>
-                                                    <th><?php echo $row['lastname']; ?></th>
-                                                    <th><?php echo $row['email']; ?></th>
-                                                    <th><?php echo $row['telephone']; ?></th>
-                                                    <th><?php echo $row['dob']; ?></th>
-                                                    <th><?php echo $row['location']; ?></th>
-                                                    <th><?php echo $row['source']; ?></th>
-                                                    <th><?php echo $row['expectations']; ?></th>
-                                                    <th><?php echo $row['attendance1']; ?></th>
-                                                    <th><?php echo $row['assembly']; ?></th>
-                                                </tr>
-                                                <?php
-                                            }
-                                            $i++;
-                                        }
-                                        ?>
-                                        </tbody>
-                                        <thead>
-                                            <tr>
-                                                <th>No.</th>
-                                                <th>Code</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                                <th>Phone Number</th>
-                                                <th>Date of Birth</th>
-                                                <th>Location</th>
-                                                <th>Info about program</th>
-                                                <th>Expectations</th>
-                                                <th>Friday</th>
-                                                <th>Registrar</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-xl-6">
+                                        <form id="basic-form-wizard" action="#">
+                                            <div>
+                                                <h3>Start</h3>
+                                                <section>
+                                                    <h4 class="font-22 mb-3">Please Enter the ALC CODE !!!</h4>
+                                                    <div class="form-group">
+                                                        <label for="username">ALC CODE :</label>
+                                                        <input type="text" class="form-control" id="username">
+                                                    </div>
+                                                   
+                                                </section>
+                                            </div>
+                                        </form>  
+                                    </div>  
+                                </div>                             
                             </div>
                         </div>
-                    </div>
+                    </div>  
                     <!-- End col -->
-                </div>
+                    
+                </div> 
                 <!-- End row -->
             </div>
             <!-- End Contentbar -->
-            <!-- Start Footerbar -->
-            <div class="footerbar">
-                <footer class="footer">
-                    <p class="mb-0">© 2020 Orbiter - All Rights Reserved.</p>
-                </footer>
-            </div>
-            <!-- End Footerbar -->
+          
         </div>
         <!-- End Rightbar -->
     </div>
@@ -594,24 +445,16 @@
     <script src="assets/js/vertical-menu.js"></script>
     <!-- Switchery js -->
     <script src="assets/plugins/switchery/switchery.min.js"></script>
-    <!-- Datatable js -->
-    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-    <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
-    <script src="assets/plugins/datatables/buttons.bootstrap4.min.js"></script>
-    <script src="assets/plugins/datatables/jszip.min.js"></script>
-    <script src="assets/plugins/datatables/pdfmake.min.js"></script>
-    <script src="assets/plugins/datatables/vfs_fonts.js"></script>
-    <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
-    <script src="assets/plugins/datatables/buttons.print.min.js"></script>
-    <script src="assets/plugins/datatables/buttons.colVis.min.js"></script>
-    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
-    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
-    <script src="assets/js/custom/custom-table-datatable.js"></script>
+    <!-- Footable js -->
+    <script src="assets/plugins/moment/moment.js"></script>     
+    <script src="assets/plugins/footable/js/footable.min.js"></script>     
+    <script src="assets/js/custom/custom-table-footable.js"></script>    
+    <!-- Form Step js -->
+    <script src="assets/plugins/jquery-step/jquery.steps.min.js"></script>
+    <script src="assets/js/custom/custom-form-wizard.js"></script>
     <!-- Core js -->
     <script src="assets/js/core.js"></script>
     <!-- End js -->
 </body>
-
 
 </html>

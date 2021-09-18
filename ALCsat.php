@@ -525,8 +525,7 @@
                                             while ($row = $success_eventreglist->fetch_assoc()) {
                                                 ?>
                                                 <tr>
-                                                    <th>No.</th>
-                                                    <th>Code</th>
+                                                    <th>ALC000<?php echo $row['id'];?></th>
                                                     <th><?php echo $row['firstname']; ?></th>
                                                     <th><?php echo $row['lastname']; ?></th>
                                                     <th><?php echo $row['email']; ?></th>

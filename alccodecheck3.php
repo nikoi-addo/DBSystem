@@ -408,25 +408,6 @@
                                     <div class="col-lg-8 col-xl-6">
                                         <form id="basic-form-wizard" action="#">
                                             <div>
-                                                <h3>Start</h3>
-                                                <section>
-                                                    <h4 class="font-22 mb-3">Please Enter the ALC CODE !!!</h4>
-                                                    <div class="form-group">
-                                                        <label for="username">ALC CODE :</label>
-                                                        <input type="text" class="form-control" id="username">
-                                                    </div>
-                                                   
-                                                </section>
-                                                <h3>Hints</h3>
-                                                <section>
-                                                    <h4 class="font-22 mb-3">See Your Hints !!!</h4>
-                                                    <ul>
-                                                        <li><strong>First Name :</strong> John</li>
-                                                        <li><strong>Last Name :</strong> Doe</li>
-                                                        <li><strong>Email ID :</strong> johndoe@gmail.com</li>
-                                                        <li><strong>ALC CODE :</strong> 123, Street, City.</li>
-                                                    </ul>
-                                                </section>
                                               <h3>Finish</h3>
                                                 <section>
                                                     <h4 class="font-22 mb-3">Check Attendance !!!</h4>
@@ -443,7 +424,7 @@
                                                     
                                                     </div>
                                                    
-                                                </section>
+                                                </section> -->
                                             </div>
                                         </form>  
                                     </div>  
