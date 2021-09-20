@@ -141,10 +141,7 @@
                                         <label for="lastname">Last Name</label>
                                         <input type="text" class="form-control" name="lastname" id="lastname" placeholder="eg. Akua Asamoah" required>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="dob">Date Of Birth</label>
-                                        <input type="date" class="form-control" name="dob" id="dob">
-                                    </div>
+                                   
                                     <div class="form-group col-md-6">
                                         <label for="title">Title</label>
                                         <div class="input-group-prepend">

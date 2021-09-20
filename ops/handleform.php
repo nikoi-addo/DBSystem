@@ -3,7 +3,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //Initializing variables
-  $firstname = $lastname = $dob = $title = $location = $email  = $telephone = $location  = $socialmedia = $customradio = $expectations = "";
+  $firstname = $lastname = $title = $location = $email  = $telephone = $location  = $socialmedia = $customradio = $expectations = "";
   $dob = 0;
   $attendance1 = $attendance2 = $attendance3 = 'No';
 
@@ -21,8 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   $title = $_POST['title'];
   $title = mysqli_real_escape_string($link, $title);
-
-  $dob = $_POST['dob'];
 
 //  $title = $_POST['title'];
 //    $title = mysqli_real_escape_string($link, $title);
@@ -68,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-  $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, assembly ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$assembly')";
+  $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, attendance1, attendance2, attendance3, expectations, source, assembly ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$assembly')";
     $success_insertregdetails = mysqli_query($link, $sql_insertregdetails);
     if ($success_insertregdetails) {
       $lastid = mysqli_insert_id($link);
