@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    if (isset($_SESSION['uname']) && $_SESSION['loggedin'] == true) {
     include 'ops/db.php';
 ?>
 
@@ -605,6 +607,9 @@
     <script src="assets/js/core.js"></script>
     <!-- End js -->
 </body>
-
-
 </html>
+<?php }
+  else {
+    header("location:login.php?lfail");
+  }
+ ?>

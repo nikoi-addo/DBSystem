@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    if (isset($_SESSION['uname']) && $_SESSION['loggedin'] == true) {
     if(isset($_GET['uc'])){
         include 'ops/db.php';
         
@@ -503,4 +505,9 @@
     else{
         header("location:../alccodecheck1.php?fail");
     }
-?>
+}
+
+  else {
+    header("location:login.php?lfail");
+  }
+ ?>

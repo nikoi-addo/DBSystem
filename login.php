@@ -32,16 +32,25 @@
                         <div class="auth-box-right">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="#">
+                                    <form action="ops/userlogin.php" method="POST" >
+                                    <?php
+                                        if (isset($_GET['ufail'])) {
+                                        ?>
+                                        <div class="alert alert-danger">Username or password is incorrect!!!</div>
+                                        <?php
+                                        }
+                                        elseif (isset($_GET['lfail'])) { ?>
+                                            <div class="alert alert-danger">You must login first!!</div>
+                                        <?php  }?>
                                         <div class="form-head">
                                             <a href="index.html" class="logo"><img src="assets/images/logo.svg" class="img-fluid" alt="logo"></a>
                                         </div>                                        
                                         <h4 class="text-primary my-4">ALC Portal Log in !</h4>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="username" placeholder="Enter Username here" required>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter Username here" required name="username" value="<?php if (isset($_GET['ufail'])) {echo $_GET['ufail'];} ?>"> 
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="password" placeholder="Enter Password here" required>
+                                            <input type="password" class="form-control" id="password" placeholder="Enter Password here" name="password" required>
                                         </div>
                                         <div class="form-row mb-3">
                                             <div class="col-sm-6">
