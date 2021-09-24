@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    if (isset($_SESSION['uname']) && $_SESSION['loggedin'] == true) {
     include 'ops/db.php';
 ?>
 
@@ -613,3 +615,8 @@
 
 
 </html>
+<?php }
+  else {
+    header("location:login.php?lfail");
+  }
+ ?>

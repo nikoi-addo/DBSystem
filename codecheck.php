@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    if (isset($_SESSION['uname']) && $_SESSION['loggedin'] == true) {
+    include 'ops/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,3 +73,8 @@
 </body>
 
 </html>
+<?php }
+  else {
+    header("location:login.php?lfail");
+  }
+ ?>
