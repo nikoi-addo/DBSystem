@@ -51,8 +51,8 @@
             <div class="topbar-mobile">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <div class="mobile-logobar">
-                            <a href="#" class="mobile-logo"><img src="assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+                        <div class="">
+                            <a href="#" class="mobile-logo"><img src="assets/images/logow.png" width="200px" alt="logo"></a>
                         </div>
                         
                     </div>
@@ -170,10 +170,7 @@
                                         <label for="lastname">Last Name</label>
                                         <input type="text" class="form-control" name="lastname" id="lastname" placeholder="eg. Akua Asamoah" required>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="dob">Date Of Birth</label>
-                                        <input type="date" class="form-control" name="dob" id="dob">
-                                    </div>
+                                   
                                     <div class="form-group col-md-6">
                                         <label for="title">Title</label>
                                         <div class="input-group-prepend">

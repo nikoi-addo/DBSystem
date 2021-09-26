@@ -3,7 +3,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //Initializing variables
-  $firstname = $lastname = $dob = $title = $location = $email  = $telephone = $location  = $socialmedia = $customradio = $expectations = "";
+  $firstname = $lastname = $title = $location = $email  = $telephone = $location  = $socialmedia = $customradio = $expectations = "";
   $dob = 0;
   $attendance1 = $attendance2 = $attendance3 = 'No';
   
@@ -77,8 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // header("location:../ALCform.php?rsp=0&regcode=". $lastid);
       }
   }
-
-  
   }
 
 ?>
