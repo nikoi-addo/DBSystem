@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $source = "Other";
   }
 
-  if ($_POST['attendance1'] == "Friday") {
+  if (isset($_POST['attendance1'])) {
     $attendance1 = "Yes";
   }
   if ($_POST['attendance2'] == "Saturday") {
@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   else{
 
-    $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, dob, attendance1, attendance2, attendance3, expectations, source, assembly ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$dob', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$assembly')";
+    $sql_insertregdetails = "INSERT INTO alc_2021_att (firstname, lastname, email, telephone, location, attendance1, attendance2, attendance3, expectations, source, assembly ) VALUES('$firstname', '$lastname', '$email', '$telephone', '$location', '$attendance1', '$attendance2', '$attendance3', '$expectations', '$source', '$assembly')";
       $success_insertregdetails = mysqli_query($link, $sql_insertregdetails);
       if ($success_insertregdetails) {
         $lastid = mysqli_insert_id($link);
-        // header("location:../ALCform.php?rsp=0&regcode=". $lastid);
+        header("location:../ALCform.php?rsp=0&regcode=". $lastid);
       }
   }
   }
