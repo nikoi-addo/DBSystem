@@ -113,6 +113,35 @@
 
                 <?php
                     }
+                    else if(isset($_GET['rg'])){
+                        // $registrationcode = "ALC00" . $_GET['regcode'];
+                        
+                                            
+                    ?>
+                    
+                    
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="responsible">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleLargeModalLabel">Registration Complete</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="color:red">
+                                <p class="title"><h3 style="color:red">Sorry, <?php echo $_GET['rg']; ?> has already registeed.</h3></p>
+                                <p>Enter a new email address</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <?php
+                        }
                 ?>
                 <!-- Start row -->
                 <div class="row">
@@ -314,7 +343,11 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const regcode = urlParams.get('regcode')
+        const rg = urlParams.get('rg')
         if(regcode !== null){
+            $('#responsible').modal('show');
+        }
+        if(rg !== null){
             $('#responsible').modal('show');
         }
     </script>
