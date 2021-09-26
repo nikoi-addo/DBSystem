@@ -510,7 +510,6 @@
                                                 <th>Last Name</th>
                                                 <th>Email</th>
                                                 <th>Phone Number</th>
-                                                <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
                                                 <th>Friday</th>
@@ -532,7 +531,6 @@
                                                     <th><?php echo $row['lastname']; ?></th>
                                                     <th><?php echo $row['email']; ?></th>
                                                     <th><?php echo $row['telephone']; ?></th>
-                                                    <th><?php echo $row['dob']; ?></th>
                                                     <th><?php echo $row['location']; ?></th>
                                                     <th><?php echo $row['source']; ?></th>
                                                     <th><?php echo $row['present2']; ?></th>
@@ -551,7 +549,6 @@
                                                 <th>Last Name</th>
                                                 <th>Email</th>
                                                 <th>Phone Number</th>
-                                                <th>Date of Birth</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
                                                 <th>Friday</th>

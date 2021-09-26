@@ -397,7 +397,6 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
-                                                <th>DOB</th>
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>
@@ -421,7 +420,6 @@
                                             <th><?php echo $row['lastname']; ?></th>
                                             <th><?php echo $row['email']; ?></th>
                                             <th><?php echo $row['telephone']; ?></th>
-                                            <th><?php echo $row['dob']; ?></th>
                                             <th><?php echo $row['location']; ?></th>
                                             <th><?php echo $row['source']; ?></th>
                                             <th><?php echo $row['attendance1']; ?></th>
@@ -442,7 +440,6 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
-                                                <th>DOB</th>
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>
