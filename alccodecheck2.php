@@ -20,7 +20,7 @@
     <meta name="keywords" content="admin, admin panel, admin template, admin dashboard, responsive, bootstrap 4, ui kits, ecommerce, web app, crm, cms, html, sass support, scss">
     <meta name="author" content="Themesbox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Orbiter - Bootstrap Minimal & Clean Admin Template</title>
+    <title>ALC CODE CHECK</title>
     <!-- Fevicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Start css -->
@@ -371,7 +371,7 @@
                                                             <a href="#" class="profile-icon"><img src="assets/images/svg-icon/email.svg" class="img-fluid" alt="email">Email</a>
                                                         </li>                                                        
                                                         <li class="media dropdown-item">
-                                                            <a href="#" class="profile-icon"><img src="assets/images/svg-icon/logout.svg" class="img-fluid" alt="logout">Logout</a>
+                                                            <a href="ops/userlogout.php" class="profile-icon"><img src="assets/images/svg-icon/logout.svg" class="img-fluid" alt="logout">Logout</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -394,8 +394,8 @@
                         <h4 class="page-title">THE ABUNDANT LIFE CONFERENCE 2021</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
-                                <li class="breadcrumb-item"><a href="alccodesearch.html">Code Search</a></li>
+                                <li class="breadcrumb-item"><a href="ALCtable.php">Tables</a></li>
+                                <li class="breadcrumb-item"><a href="ALCform.php">ALC Form</a></li>
                                 <li class="breadcrumb-item active" aria-current="CodeCheck">Code Check</li>
                             </ol>
                         </div>
