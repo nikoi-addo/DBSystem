@@ -636,7 +636,7 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-6 col-xl-6">
+                    <div class="col-lg-6 col-xl-4">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <h5 class="card-title mb-0">Progress</h5>
@@ -714,7 +714,7 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <div class="row align-items-center">
@@ -859,21 +859,21 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <!-- <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <div class="card text-center m-b-30">
                             <div class="card-header">                                
-                                <h5 class="card-title mb-0">Users</h5>
+                                <h5 class="card-title mb-0">Total Registered</h5><br>
                             </div>
                             <div class="card-body px-0 pb-0">
-                                <p class="dash-analytic-icon"><i class="feather icon-users primary-rgba text-primary"></i></p>
-                                <h4 class="mb-3">125</h4>
-                                <p>80% Target</p>
+                                <p class="dash-analytic-icon"><i class="feather icon-users primary-rgba text-primary"></i></p><br>
+                                <h3 class="mb-3"><?php echo $row_cnt_all; ?> People</h3><br>
+                                <!-- <p>80% Target</p>
                                 <div class="progress" style="height: 5px;">
                                     <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- End col -->
                     <!-- Start col -->
                     <!-- <div class="col-lg-6 col-xl-3">
