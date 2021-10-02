@@ -42,10 +42,10 @@
     $result_attsun = mysqli_query($link, "SELECT * from alc_2021_att WHERE present3='Yes'");
     $row_cnt_attsun = mysqli_num_rows($result_attsun);
     
-    $result_chttoc = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly='TTOC'");
+    $result_chttoc = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly='The Temple of Charis'");
     $row_cnt_chttoc = mysqli_num_rows($result_chttoc);
 
-    $result_chothers = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly!='TTOC'");
+    $result_chothers = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly!='The Temple of Charis'");
     $row_cnt_chothers = mysqli_num_rows($result_chothers);
 
     $result_all = mysqli_query($link, "SELECT * from alc_2021_att");
