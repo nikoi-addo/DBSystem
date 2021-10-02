@@ -60,11 +60,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Orbiter is a bootstrap minimal & clean admin template">
+    <meta name="description" content="The Abundant Life Conference 2021">
     <meta name="keywords" content="admin, admin panel, admin template, admin dashboard, responsive, bootstrap 4, ui kits, ecommerce, web app, crm, cms, html, sass support, scss">
     <meta name="author" content="Themesbox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Orbiter</title>
+    <title>ALC '21</title>
     <!-- Fevicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Start css -->
@@ -523,19 +523,15 @@
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
-                        <h4 class="page-title">Widgets</h4>
+                        <h4 class="page-title">ALC '21 Widgets</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="ALCtable.php">ALC Table</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Widgets</li>
                             </ol>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="widgetbar">
-                            <button class="btn btn-primary-rgba"><i class="feather icon-plus mr-2"></i>Actions</button>
-                        </div>                        
-                    </div>
+                  
                 </div>          
             </div>
             <!-- End Breadcrumbbar -->
@@ -548,7 +544,7 @@
                         <div class="card m-b-30">
                             <div class="card-body">
                                 <div class="media">
-                                    <span class="align-self-center mr-3 action-icon badge badge-secondary-inverse"><i class="feather icon-folder"></i></span>
+                                    <span class="align-self-center mr-3 action-icon badge badge-secondary-inverse"><i class="feather icon-user"></i></span>
                                     <div class="media-body">
                                         <p class="mb-0">Male</p>
                                         <h5 class="mb-0"><?php echo $row_cnt_males; ?></h5>                      
@@ -563,7 +559,7 @@
                         <div class="card m-b-30">
                             <div class="card-body">
                                 <div class="media">
-                                    <span class="align-self-center mr-3 action-icon badge badge-secondary-inverse"><i class="feather icon-clipboard"></i></span>
+                                    <span class="align-self-center mr-3 action-icon badge badge-secondary-inverse"><i class="feather icon-user"></i></span>
                                     <div class="media-body">
                                         <p class="mb-0">Females</p>
                                         <h5 class="mb-0"><?php echo $row_cnt_females; ?></h5>                                                
@@ -956,10 +952,10 @@
                             <div class="card-footer">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <span class="font-13">Total</span>
+                                        <span class="font-13">Code Checked</span>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <span class="badge badge-success"><i class="feather icon-trending-up mr-1"></i> <?php echo $row_cnt_attfri;  ?></span>
+                                        <span class="badge badge-primary"><i class="feather icon-trending-up mr-1"></i> <?php echo $row_cnt_attfri;  ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -972,7 +968,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-5">
-                                        <span class="action-icon badge badge-success-inverse mr-0"><i class="feather icon-award"></i></span>
+                                        <span class="action-icon badge badge-success-inverse mr-0"><i class="feather icon-user"></i></span>
                                     </div>
                                     <div class="col-7 text-right">
                                         <h5 class="card-title font-14">Saturday</h5>
@@ -983,7 +979,7 @@
                             <div class="card-footer">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <span class="font-13">Total</span>
+                                        <span class="font-13">Code Checked</span>
                                     </div>
                                     <div class="col-4 text-right">
                                         <span class="badge badge-success"><i class="feather icon-trending-up mr-1"></i> <?php echo $row_cnt_attsat;  ?></span>
@@ -999,7 +995,7 @@
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-5">
-                                        <span class="action-icon badge badge-warning-inverse mr-0"><i class="feather icon-briefcase"></i></span>
+                                        <span class="action-icon badge badge-warning-inverse mr-0"><i class="feather icon-user"></i></span>
                                     </div>
                                     <div class="col-7 text-right">
                                         <h5 class="card-title font-14">Sunday</h5>
@@ -1010,7 +1006,7 @@
                             <div class="card-footer">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <span class="font-13">Totak</span>
+                                        <span class="font-13">Code Checked</span>
                                     </div>
                                     <div class="col-4 text-right">
                                         <span class="badge badge-success"><i class="feather icon-trending-up mr-1"></i> <?php echo $row_cnt_attsun;  ?></span>
@@ -1299,7 +1295,7 @@
             <!-- Start Footerbar -->
             <div class="footerbar">
                 <footer class="footer">
-                    <p class="mb-0">© 2020 Orbiter - All Rights Reserved.</p>
+                    <p class="mb-0">© 2021 TTOC - All Rights Reserved.</p>
                 </footer>
             </div>
             <!-- End Footerbar -->
