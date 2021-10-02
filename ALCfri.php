@@ -464,8 +464,8 @@
                         <h4 class="page-title">The Abundant Life Conference 2021</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
-                                <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">ALC</a></li>
+                                <li class="breadcrumb-item"><a href="ALCtable.php">ALC Table</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">ALC 2021 - Day 1 (FRIDAY)</li>
                             </ol>
                         </div>
