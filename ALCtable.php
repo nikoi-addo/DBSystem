@@ -360,7 +360,7 @@
                         <h4 class="page-title">The Abundant Life Conference 2021</h4>
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">ALC</a></li>
+                                <li class="breadcrumb-item"><a href="#">ALC Code Check</a></li>
                                 <li class="breadcrumb-item"><a href="#">ALC Table</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">ALC 2021 - All Days</li>
                             </ol>
@@ -397,6 +397,10 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
+<<<<<<< Updated upstream
+=======
+                                              
+>>>>>>> Stashed changes
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>
@@ -420,6 +424,10 @@
                                             <th><?php echo $row['lastname']; ?></th>
                                             <th><?php echo $row['email']; ?></th>
                                             <th><?php echo $row['telephone']; ?></th>
+<<<<<<< Updated upstream
+=======
+                                            
+>>>>>>> Stashed changes
                                             <th><?php echo $row['location']; ?></th>
                                             <th><?php echo $row['source']; ?></th>
                                             <th><?php echo $row['attendance1']; ?></th>
@@ -440,6 +448,10 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
+<<<<<<< Updated upstream
+=======
+                                                
+>>>>>>> Stashed changes
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>
