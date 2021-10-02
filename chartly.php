@@ -42,6 +42,15 @@
     $result_attsun = mysqli_query($link, "SELECT * from alc_2021_att WHERE present3='Yes'");
     $row_cnt_attsun = mysqli_num_rows($result_attsun);
     
+    $result_chttoc = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly='TTOC'");
+    $row_cnt_chttoc = mysqli_num_rows($result_chttoc);
+
+    $result_chothers = mysqli_query($link, "SELECT * from alc_2021_att WHERE assembly!='TTOC'");
+    $row_cnt_chothers = mysqli_num_rows($result_chothers);
+
+    $result_all = mysqli_query($link, "SELECT * from alc_2021_att");
+    $row_cnt_all = mysqli_num_rows($result_all);
+    
     
 ?>
 <!DOCTYPE html>
@@ -627,7 +636,7 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-6 col-xl-12">
+                    <div class="col-lg-6 col-xl-6">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <h5 class="card-title mb-0">Progress</h5>
@@ -705,7 +714,7 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <!-- <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <div class="row align-items-center">
@@ -732,13 +741,13 @@
                                     </div>
                                     <div class="col-lg-6 col-xl-5 text-center">                                                
                                         <img src="assets/images/ecommerce/storage.png" class="img-fluid" alt="storage">
-                                        <p class="storage-num"><?php echo ($row_cnt_chttoc/$row_cnt_all)*100; ?>%</p>
+                                        <p class="storage-num"><?php echo round(($row_cnt_chttoc/$row_cnt_all)*100, 2); ?>%</p>
                                     </div>
                                     <br><br>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- End col -->
                     <!-- Start col -->
                     <!-- <div class="col-lg-6">
