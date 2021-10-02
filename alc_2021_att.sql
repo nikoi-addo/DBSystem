@@ -2,6 +2,7 @@ CREATE TABLE `alc_2021_att` (
   `id` int(16) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(32) NOT NULL,
   `lastname` varchar(32) NOT NULL,
+  `title` varchar(8) NOT NULL,
   `email` varchar(64) NOT NULL,
   `telephone` varchar(32) NOT NULL,
   `location` varchar(32) NOT NULL,
