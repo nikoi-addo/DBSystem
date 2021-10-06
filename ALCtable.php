@@ -397,10 +397,6 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
-<<<<<<< Updated upstream
-=======
-                                              
->>>>>>> Stashed changes
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>
@@ -424,10 +420,6 @@
                                             <th><?php echo $row['lastname']; ?></th>
                                             <th><?php echo $row['email']; ?></th>
                                             <th><?php echo $row['telephone']; ?></th>
-<<<<<<< Updated upstream
-=======
-                                            
->>>>>>> Stashed changes
                                             <th><?php echo $row['location']; ?></th>
                                             <th><?php echo $row['source']; ?></th>
                                             <th><?php echo $row['attendance1']; ?></th>
@@ -448,10 +440,6 @@
                                                 <th>LName</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
-<<<<<<< Updated upstream
-=======
-                                                
->>>>>>> Stashed changes
                                                 <th>Location</th>
                                                 <th>Info</th>
                                                 <th>Fri</th>

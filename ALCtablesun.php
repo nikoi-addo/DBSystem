@@ -516,7 +516,8 @@
                                                 <th>Phone Number</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Sunday</th>
+                                                <th>Registered-Sunday</th>
+                                                <th>Attended-Sunday</th>
                                                 <th>Assembly</th>
                                         </tr>
                                         </thead>
@@ -538,6 +539,7 @@
                                                     <th><?php echo $row['location']; ?></th>
                                                     <th><?php echo $row['source']; ?></th>
                                                     <th><?php echo $row['attendance3']; ?></th>
+                                                    <th><?php echo $row['present3']; ?></th>
                                                     <th><?php echo $row['assembly']; ?></th>
                                                 </tr>
                                                 <?php
@@ -555,7 +557,8 @@
                                                 <th>Phone Number</th>
                                                 <th>Location</th>
                                                 <th>Info about program</th>
-                                                <th>Friday</th>
+                                                <th>Registered-Friday</th>
+                                                <th>Attended-Sunday</th>
                                                 <th>Assembly</th>
                                             </tr>
                                         </thead>
