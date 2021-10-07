@@ -50,6 +50,21 @@
 
     $result_all = mysqli_query($link, "SELECT * from alc_2021_att");
     $row_cnt_all = mysqli_num_rows($result_all);
+
+    $result_socialmedia = mysqli_query($link, "SELECT * FROM alc_2021_att WHERE source='Social Media'");
+    $row_cnt_socialmedia = mysqli_num_rows($result_socialmedia);
+
+    $result_cellmeeting = mysqli_query($link, "SELECT * FROM alc_2021_att WHERE source='Cell Meeting'");
+    $row_cnt_cellmeeting = mysqli_num_rows($result_cellmeeting);
+    
+    $result_invitation = mysqli_query($link, "SELECT * FROM alc_2021_att WHERE source='Invitation'");
+    $row_cnt_invitation = mysqli_num_rows($result_invitation);
+    
+    $result_churchservice = mysqli_query($link, "SELECT * FROM alc_2021_att WHERE source='Church Service'");
+    $row_cnt_churchservice = mysqli_num_rows($result_churchservice);
+
+    $result_others = mysqli_query($link, "SELECT * FROM alc_2021_att WHERE source='Others'");
+    $row_cnt_others = mysqli_num_rows($result_others);
     
     
 ?>
@@ -632,7 +647,54 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="card m-b-30">
+                            <div class="card-header">                                
+                                <h5 class="card-title mb-0">Where did you hear about the program?</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Social Media <span class="float-right"><?php echo round(($row_cnt_socialmedia/$row_cnt_all)*100, 2); ?>%</span></p>
+                                <div class="progress mb-4" style="height: 4px;">
+                                  <div class="progress-bar" role="progressbar" style="width: <?php echo round(($row_cnt_socialmedia/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="<?php echo $row_cnt_males; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p>Cell Meeting <span class="float-right"><?php echo round(($row_cnt_cellmeeting/$row_cnt_all)*100, 2); ?>%</span></p>
+                                <div class="progress mb-4" style="height: 4px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo round(($row_cnt_cellmeeting/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p>Invitation <span class="float-right"><?php echo round(($row_cnt_invitation/$row_cnt_all)*100, 2); ?>%</span></p>
+                                <div class="progress mb-1" style="height: 4px;">
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_invitation/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p>Church Service <span class="float-right"><?php echo round(($row_cnt_churchservice/$row_cnt_all)*100, 2); ?>%</span></p>
+                                <div class="progress mb-1" style="height: 4px;">
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_churchservice/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p>Others <span class="float-right"><?php echo round(($row_cnt_others/$row_cnt_all)*100, 2); ?>%</span></p>
+                                <div class="progress mb-1" style="height: 4px;">
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_others/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>                                         
+                            </div>
+                            <!-- <div class="card-footer">
+                                <span class="mr-3">Teams : </span>
+                                <div class="avatar-group">
+                                    <div class="avatar">
+                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Amy Adams">
+                                            <img src="assets/images/users/men.svg" alt="avatar" class="rounded-circle">
+                                        </a>
+                                    </div>
+                                    <div class="avatar">
+                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Amy Adams">
+                                            <img src="assets/images/users/women.svg" alt="avatar" class="rounded-circle">
+                                        </a>
+                                    </div>
+                                </div>
+                                <span class="float-right mt-2"><i class="feather icon-paperclip mr-1"></i>5</span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-6 col-xl-6">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <h5 class="card-title mb-0">Progress</h5>
@@ -642,15 +704,15 @@
                                 <p>Friday <span class="float-right"><?php echo round(($row_cnt_attfri/$row_cnt_regfri)*100, 2); ?>%</span></p>
                                 <div class="progress mb-4" style="height: 4px;">
                                   <div class="progress-bar" role="progressbar" style="width: <?php echo round(($row_cnt_attfri/$row_cnt_regfri)*100, 2); ?>%;" aria-valuenow="<?php echo $row_cnt_males; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                </div><br>
                                 <p>Saturday <span class="float-right"><?php echo round(($row_cnt_attsat/$row_cnt_regsat)*100, 2); ?>%</span></p>
                                 <div class="progress mb-4" style="height: 4px;">
                                   <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo round(($row_cnt_attsat/$row_cnt_regsat)*100, 2); ?>%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                </div><br>
                                 <p>Sunday <span class="float-right"><?php echo round(($row_cnt_attsun/$row_cnt_regsun)*100, 2); ?>%</span></p>
                                 <div class="progress mb-1" style="height: 4px;">
                                   <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_attsun/$row_cnt_regsun)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>                                        
+                                </div><br>                                        
                             </div>
                             <!-- <div class="card-footer">
                                 <span class="mr-3">Teams : </span>
@@ -710,7 +772,7 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="card m-b-30">
                             <div class="card-header">                                
                                 <div class="row align-items-center">
@@ -737,9 +799,9 @@
                                     </div>
                                     <div class="col-lg-6 col-xl-5 text-center">                                                
                                         <img src="assets/images/ecommerce/storage.png" class="img-fluid" alt="storage">
-                                        <p class="storage-num"><?php echo round(($row_cnt_chttoc/$row_cnt_all)*100, 2); ?>%</p>
+                                        <p class="storage-num"><?php echo round(($row_cnt_chttoc/$row_cnt_all)*100, 2); ?>%<br><br></p><br>
                                     </div>
-                                    <br><br>
+                                    <br><br><br><br>
                                 </div>
                             </div>
                         </div>
@@ -855,14 +917,14 @@
                     </div> -->
                     <!-- End col -->
                     <!-- Start col -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="card text-center m-b-30">
                             <div class="card-header">                                
                                 <h5 class="card-title mb-0">Total Registered</h5><br>
                             </div>
                             <div class="card-body px-0 pb-0">
                                 <p class="dash-analytic-icon"><i class="feather icon-users primary-rgba text-primary"></i></p><br>
-                                <h3 class="mb-3"><?php echo $row_cnt_all; ?> People</h3><br>
+                                <h3 class="mb-3"><?php echo $row_cnt_all; ?> People</h3>
                                 <!-- <p>80% Target</p>
                                 <div class="progress" style="height: 5px;">
                                     <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
