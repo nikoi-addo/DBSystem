@@ -12,7 +12,7 @@
     $result_males = mysqli_query($link, "SELECT * from alc_2021_att WHERE title='Mr.'");
     $row_cnt_males = mysqli_num_rows($result_males);
 
-    $result_females = mysqli_query($link, "SELECT * from alc_2021_att WHERE title='Mrs.' or title='Miss'");
+    $result_females = mysqli_query($link, "SELECT * from alc_2021_att WHERE title='Mrs.' or title='Miss.'");
     $row_cnt_females = mysqli_num_rows($result_females);
 
     $result_pastors = mysqli_query($link, "SELECT * from alc_2021_att WHERE title='Pastor'");
@@ -654,23 +654,23 @@
                             </div>
                             <div class="card-body">
                                 <p>Social Media <span class="float-right"><?php echo round(($row_cnt_socialmedia/$row_cnt_all)*100, 2); ?>%</span></p>
-                                <div class="progress mb-4" style="height: 4px;">
+                                <div class="progress mb-3" style="height: 4px;">
                                   <div class="progress-bar" role="progressbar" style="width: <?php echo round(($row_cnt_socialmedia/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="<?php echo $row_cnt_males; ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p>Cell Meeting <span class="float-right"><?php echo round(($row_cnt_cellmeeting/$row_cnt_all)*100, 2); ?>%</span></p>
-                                <div class="progress mb-4" style="height: 4px;">
+                                <div class="progress mb-3" style="height: 4px;">
                                   <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo round(($row_cnt_cellmeeting/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p>Invitation <span class="float-right"><?php echo round(($row_cnt_invitation/$row_cnt_all)*100, 2); ?>%</span></p>
-                                <div class="progress mb-1" style="height: 4px;">
+                                <div class="progress mb-3" style="height: 4px;">
                                   <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_invitation/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p>Church Service <span class="float-right"><?php echo round(($row_cnt_churchservice/$row_cnt_all)*100, 2); ?>%</span></p>
-                                <div class="progress mb-1" style="height: 4px;">
+                                <div class="progress mb-3" style="height: 4px;">
                                   <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_churchservice/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p>Others <span class="float-right"><?php echo round(($row_cnt_others/$row_cnt_all)*100, 2); ?>%</span></p>
-                                <div class="progress mb-1" style="height: 4px;">
+                                <div class="progress mb-3" style="height: 4px;">
                                   <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_others/$row_cnt_all)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>                                         
                             </div>
@@ -710,7 +710,7 @@
                                   <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo round(($row_cnt_attsat/$row_cnt_regsat)*100, 2); ?>%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div><br>
                                 <p>Sunday <span class="float-right"><?php echo round(($row_cnt_attsun/$row_cnt_regsun)*100, 2); ?>%</span></p>
-                                <div class="progress mb-1" style="height: 4px;">
+                                <div class="progress mb-4" style="height: 4px;">
                                   <div class="progress-bar bg-secondary" role="progressbar" style="width: <?php echo round(($row_cnt_attsun/$row_cnt_regsun)*100, 2); ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div><br>                                        
                             </div>
